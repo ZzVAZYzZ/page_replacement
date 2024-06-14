@@ -4,10 +4,13 @@ export default class FIFOPageReplacement {
         this.frames = [];
         this.pageFaults = 0;
         this.resultElement = resultElement;
-    }
+        this.autoBot = 0;
+    }   
 
     accessPage(page) {
+        
         if (!this.frames.includes(page)) {
+            
             // Page fault
             this.pageFaults++;
             if (this.frames.length < this.frameSize) {
@@ -15,19 +18,24 @@ export default class FIFOPageReplacement {
                 this.frames.push(page);
             } else {
                 // Replace the oldest page
-                this.frames.shift();
-                this.frames.push(page);
+                this.frames[this.autoBot] = page;
             }
+            this.runAutoBout();
         }
         // Update result in DOM
         this.updateResult();
     }
 
+    runAutoBout(){
+        this.autoBot++;
+        if(this.autoBot>=this.frameSize){
+            this.autoBot = 0;
+        }
+    }
+
     updateResult() {
         // Prepare the content to append
         const framesContent = this.frames.join(', ');
-        const pageFaultsContent = `Total page faults: ${this.pageFaults}`;
-
         // Create HTML content to append
         const contentToAppend = `
             <p>Frames: [${framesContent}]</p>
