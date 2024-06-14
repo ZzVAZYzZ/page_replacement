@@ -1,8 +1,9 @@
 export default class FIFOPageReplacement {
-    constructor(frameSize) {
+    constructor(frameSize, resultElement) {
         this.frameSize = frameSize;
         this.frames = [];
         this.pageFaults = 0;
+        this.resultElement = resultElement;
     }
 
     accessPage(page) {
@@ -18,8 +19,22 @@ export default class FIFOPageReplacement {
                 this.frames.push(page);
             }
         }
-        // For debug: Print the current state of frames
-        console.log(this.frames);
+        // Update result in DOM
+        this.updateResult();
+    }
+
+    updateResult() {
+        // Prepare the content to append
+        const framesContent = this.frames.join(', ');
+        const pageFaultsContent = `Total page faults: ${this.pageFaults}`;
+
+        // Create HTML content to append
+        const contentToAppend = `
+            <p>Frames: [${framesContent}]</p>
+        `;
+
+        // Append content to resultElement
+        this.resultElement.insertAdjacentHTML('beforeend', contentToAppend);
     }
 
     getPageFaults() {
