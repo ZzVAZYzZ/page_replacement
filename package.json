@@ -1,0 +1,15 @@
+{
+  "name": "page-replacement",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "live-server"
+  },
+  "author": "minh hai",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
