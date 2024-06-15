@@ -43,7 +43,7 @@ export default class CLOCKPageReplacement {
     checkPinkyCounter(){
         this.pinkyCounter++;
         if(this.pinkyCounter > this.frameSize){
-            this.pinkyCounter = 1;
+            this.pinkyCounter = 1
         }
     }
 
