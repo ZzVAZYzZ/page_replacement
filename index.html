@@ -9,79 +9,80 @@
 </head>
 
 <body>
-    <div>
-        <!-- navbar -->
-        <nav>
-            <!-- nav 1 -->
-            <div class="nav-1">
-                <!-- title -->
-                <div>
-                    <h1>Page Replacement</h1>
-                </div>
-            </div>
-            <!-- nav 2 -->
-            <div class="nav-2">
-                <div>
-                    <h2>FIFO</h2>
-                </div>
-                <div>
-                    <h2>LRU</h2>
-                </div>
-                <div>
-                    <h2>OPTIMAL</h2>
-                </div>
-                <div>
-                    <h2>CLOCK</h2>
-                </div>
-            </div>
-        </nav>
-        <!-- input zone -->
+    <div class="contain">
         <div>
-            <!-- FRAME-choice -->
-           <div>
-            <div class="Frame-choice-wrapper">
-                <div>
-                    <h3>FRAME:</h3>
+            <!-- navbar -->
+            <nav>
+                <!-- nav 1 -->
+                <div class="nav-1">
+                    <!-- title -->
+                    <div>
+                        <h1>Page Replacement</h1>
+                    </div>
                 </div>
-                <div>
-                    <ul>
-                        <li><button>1</button></li>
-                        <li><button>2</button></li>
-                        <li><button>3</button></li>
-                        <li><button>4</button></li>
-                        <li><button>5</button></li>
-                    </ul>
+                <!-- nav 2 -->
+                <div class="nav-2">
+                    <div>
+                        <h2>FIFO</h2>
+                    </div>
+                    <div>
+                        <h2>LRU</h2>
+                    </div>
+                    <div>
+                        <h2>OPTIMAL</h2>
+                    </div>
+                    <div>
+                        <h2>CLOCK</h2>
+                    </div>
                 </div>
-            </div>
-           </div>
-           <!-- input reference -->
-           <div>
+            </nav>
+            <!-- input zone -->
             <div>
-                <h2>REFERENCE:</h2>
-            </div>
-            <div>
-                <input type="text" id="referenceDetail">
-            </div>
-
-           </div>
-
-           <!-- RUN button -->
-           <div>
-                <div>
-                    <button onclick="runCLOCK()">RUN</button>
+                <!-- FRAME-choice -->
+               <div class="Frame-choice-wrapper">
+                <div >
+                    <div>
+                        <h3>FRAME:</h3>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><button>1</button></li>
+                            <li><button>2</button></li>
+                            <li><button>3</button></li>
+                            <li><button>4</button></li>
+                            <li><button>5</button></li>
+                        </ul>
+                    </div>
                 </div>
-           </div>
+               </div>
+               <!-- input reference -->
+               <div>
+                <div>
+                    <h2>REFERENCE:</h2>
+                </div>
+                <div>
+                    <input type="text" id="referenceDetail">
+                </div>
+    
+               </div>
+    
+               <!-- RUN button -->
+               <div>
+                    <div>
+                        <button onclick="runCLOCK()">RUN</button>
+                    </div>
+               </div>
+               
+            </div>
+    
            
+            <!-- result zone -->
+            <div id="result">
+    
+            </div>
+    
         </div>
-
-       
-        <!-- result zone -->
-        <div id="result">
-
-        </div>
-
     </div>
-
     <script type="module" src="./index.js"></script>
 </body>
 

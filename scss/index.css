@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,15 +6,18 @@
   list-style: none;
 }
 
-body div {
+body .contain {
   width: 1440px;
   margin: 0 auto;
 }
-body div nav {
+body .contain div {
+  width: 1440px;
+}
+body .contain div nav {
   width: 1440px; /* Ensure this width is appropriate for your layout */
   height: 275px;
 }
-body div nav .nav-1 {
+body .contain div nav .nav-1 {
   width: 100%;
   height: 130px;
   background-color: #2e2e2e;
@@ -21,29 +25,72 @@ body div nav .nav-1 {
   align-items: center;
   justify-content: center;
 }
-body div nav .nav-1 h1 {
+body .contain div nav .nav-1 h1 {
   color: #fff;
   font-size: 50px;
   text-align: center;
+  font-family: "Playfair Display", serif;
 }
-body div nav .nav-2 {
+body .contain div nav .nav-2 {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 145px;
 }
-body div nav .nav-2 div {
+body .contain div nav .nav-2 div {
   width: 360px;
   height: 145px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid #000;
+  cursor: pointer;
 }
-body div nav .nav-2 div h2 {
+body .contain div nav .nav-2 div h2 {
   font-size: 50px;
+  font-family: "Playfair Display", serif;
 }
-body div nav .nav-2 div:hover {
+body .contain div nav .nav-2 div:hover {
+  background-color: #ff7675;
+  color: #fff;
+}
+body .contain div div {
+  width: 1440px;
+}
+body .contain div div .Frame-choice-wrapper {
+  width: 1440px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 36px -14px;
+}
+body .contain div div .Frame-choice-wrapper div {
+  display: flex;
+  flex-direction: row;
+  width: 420px;
+}
+body .contain div div .Frame-choice-wrapper div div h3 {
+  font-size: 32px;
+  line-height: 49px;
+  text-align: center;
+  margin: 0 auto;
+  font-family: "Playfair Display", serif;
+}
+body .contain div div .Frame-choice-wrapper div div ul {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  gap: 12px;
+}
+body .contain div div .Frame-choice-wrapper div div ul li button {
+  width: 49px;
+  aspect-ratio: 1/1;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 32px;
+}
+body .contain div div .Frame-choice-wrapper div div ul li button:hover {
   background-color: #ff7675;
   color: #fff;
 }/*# sourceMappingURL=index.css.map */

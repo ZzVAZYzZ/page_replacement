@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
@@ -6,95 +9,129 @@
 }
 
 body {
-  
-  div {
+  .contain{
     width: 1440px;
     margin: 0 auto;
-    // navbar
-    nav {
-      width: 1440px; /* Ensure this width is appropriate for your layout */
-      height: 275px;
-
-      .nav-1 {
-        width: 100%;
-        height: 130px;
-        background-color: #2e2e2e;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        h1 {
-          color: #fff;
-          font-size: 50px;
-          text-align: center;
-        }
-      }
-
-      .nav-2 {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        height: 145px;
-
-        div {
-          width: 360px;
-          height: 145px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border: 1px solid #000;
-
-          h2 {
-            font-size: 50px;
-          }
-          &:hover {
-            background-color: #ff7675;
-            color: #fff;
-          }
-        }
-      }
-    }
-    // input zone
     div {
-      div {
-        .Frame-choice-wrapper {
+      width: 1440px;
+      // navbar
+      nav {
+        width: 1440px; /* Ensure this width is appropriate for your layout */
+        height: 275px;
+  
+        .nav-1 {
+          width: 100%;
+          height: 130px;
+          background-color: #2e2e2e;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+  
+          h1 {
+            color: #fff;
+            font-size: 50px;
+            text-align: center;
+            font-family: "Playfair Display", serif;
+          }
+        }
+  
+        .nav-2 {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          height: 145px;
+  
           div {
-            h3 {
+            width: 360px;
+            height: 145px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #000;
+            cursor: pointer;
+            h2 {
+              font-size: 50px;
+              font-family: "Playfair Display", serif;
+            }
+            &:hover {
+              background-color: #ff7675;
+              color: #fff;
             }
           }
-          div {
-            ul {
-              li {
-                button {
+        }
+      }
+      // input zone
+      div {
+        width: 1440px;
+        .Frame-choice-wrapper {
+          width: 1440px;
+          display: flex;
+          justify-content: flex-end;
+          margin: 36px -14px;
+           div{
+            display: flex;
+            flex-direction: row;
+            width: 420px;
+            div {
+              h3 {
+                font-size: 32px;
+                line-height: 49px;
+                text-align: center;
+                margin: 0 auto;
+                font-family: "Playfair Display", serif;
+              }
+            }
+            div {
+              ul {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                height: 100%;
+                justify-content: space-around;
+                gap: 12px;
+                li {
+                  button {
+                    width: 49px;
+                    aspect-ratio: 1/1;
+                    background-color: #fff;
+                    cursor: pointer;
+                    font-size: 32px;
+                    &:hover {
+                      background-color: #ff7675;
+                      color: #fff;
+                    }
+                  }
+                  
                 }
               }
             }
           }
-        }
-        div {
+          //input reference
           div {
-            h2{
-
+            div {
+              h2{
+  
+              }
             }
-          }
-          div {
-            input{
-
+            div {
+              input{
+  
+              }
             }
           }
         }
       }
-    }
-
-    // RUN button
-    div{
-        div{
-            button{
-                
-            }
-        }
-    }
   
+      // RUN button
+      div{
+          div{
+              button{
+                  
+              }
+          }
+      }
+    
+    }
+      // result zone
   }
-    // result zone
 }
