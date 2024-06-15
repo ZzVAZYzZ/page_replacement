@@ -8,8 +8,8 @@ export default class FIFOPageReplacement {
     }   
 
     accessPage(page) {
-        
-        if (!this.frames.includes(page)) {
+        const pageExists = this.frames.some(item => item.page === page);
+        if (!pageExists) {
             
             // Page fault
             this.pageFaults++;

@@ -8,8 +8,8 @@ export default class LRUPageReplacement {
     }
 
     accessPage(page) {
-    
-        if (!this.frames.includes(page)) {
+        const pageExists = this.frames.some(item => item.page === page);
+        if (!pageExists) {
             // Page fault
             this.pageFaults++;
             if (this.frames.length < this.frameSize) {
