@@ -1,49 +1,145 @@
-*{
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
 }
 
-body{
-    div{
-        nav{
-            width: 1440px;
+body {
+   
+    div {
+        nav {
+            width: 1440px; /* Ensure this width is appropriate for your layout */
             height: 275px;
-            
-            .nav-1{
+
+            .nav-1 {
                 width: 100%;
                 height: 130px;
                 background-color: #2E2E2E;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                h1{
+
+                h1 {
                     color: #fff;
                     font-size: 50px;
-                    // text-shadow: 0 0 12px #fff,
-                    //             0 0 16px #fff,
-                    //             0 0 20px #fff;
                 }
             }
-            .nav-2{
+
+            .nav-2 {
                 display: flex;
                 flex-direction: row;
                 width: 100%;
                 height: 145px;
-                div{
+
+                div {
                     width: 360px;
                     height: 145px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     border: 1px solid #000;
-                    h2{
+
+                    h2 {
                         font-size: 50px;
+                    }
+                    &:hover {
+                        background-color: #FF7675;
                     }
                 }
             }
         }
-        
     }
+
+    .frame {
+        display: flex; /* Đặt frame thành flex container để các phần tử con cùng nằm trên một hàng */
+        align-items: center; /* Căn chỉnh theo trục dọc */
+        justify-content: flex-end; /* Căn chỉnh các phần tử con sang bên phải */
+        .frame-header {
+            h1 {
+                width: 115px;
+                height: 43px;
+                display: flex;
+                margin: 30px;
+                align-items: flex-end;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            margin-right: 10px; /* Khoảng cách giữa tiêu đề và các nút */
+
+            div {
+                button {
+                    width: 49px;
+                    height: 49px;
+                    margin: 7px;
+                    border: 1px solid black; /* Thay đổi từ border: 1px black sang border: 1px solid black */
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #FF7675;
+                    }
+                }
+            }
+        }
+    }
+
+    .re{
+        display: flex; 
+        align-items: center; 
+        justify-content: flex-start;
+        margin-top: -150px;
+    } 
+    
+        .reference {
+            h1 {
+                margin-left: 20px;
+                width: 191px;
+                height: 43px;
+                font-size: 32px;
+                /* Adjust other styles as needed */
+            }
+        }
+
+        .number-box {
+            width: 1165px;
+            height: 80px;
+            margin-left: 40px; /* Adds margin to the left of .number-box */
+            border: 1px solid black;
+
+            .number-input {
+                width: 100%;
+                height: 80px;
+                padding: 10px;
+                font-size: 16px;
+                box-sizing: border-box;
+        }
+    }
+
+
+    .run {
+        width: 1440px;
+        height: auto;
+        display: flex; 
+        align-items: flex-end;
+        justify-content: flex-end; 
+   
+   
+    
+        button {
+            width: 110px;
+            height: 58px;
+            font-size: 32px; /* Điều chỉnh kích thước chữ */
+            cursor: pointer; 
+            border:1px solid black;
+
+            &:hover {
+                background-color: #FF7675; 
+            }
+        }
+    
+    }
+   
+        
 }
