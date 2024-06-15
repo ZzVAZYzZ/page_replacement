@@ -1,6 +1,7 @@
 import FIFOPageReplacement from './classes/FIFOPageReplacement.js';
 import LRUPageReplacement from './classes/LRUPageReplacement.js';
 import OPTIMALPageReplacement from './classes/OPTIMALPageReplacement.js';
+import CLOCKPageReplacement from './classes/CLOCKPageReplacement.js';
 
 const frameChoice = 4;
 
@@ -35,6 +36,17 @@ window.runOPTIMAL = () => {
     const result = document.getElementById('result');
     result.innerHTML = "";
     const optimal = new OPTIMALPageReplacement(frameChoice,result);
+    pages.forEach(page => optimal.accessPage(page));
+    const totalPageFaults = optimal.getPageFaults();
+    result.innerHTML += `Total page faults: ${totalPageFaults}`;
+}
+
+window.runCLOCK = () => {
+    const inputValue = document.getElementById('referenceDetail').value.trim();
+    const pages = inputValue.split(' ').map(Number);
+    const result = document.getElementById('result');
+    result.innerHTML = "";
+    const optimal = new CLOCKPageReplacement(frameChoice,result);
     pages.forEach(page => optimal.accessPage(page));
     const totalPageFaults = optimal.getPageFaults();
     result.innerHTML += `Total page faults: ${totalPageFaults}`;

@@ -9,6 +9,8 @@ export default class LRUPageReplacement {
 
     accessPage(page) {
         const pageExists = this.frames.some(item => item.page === page);
+        //reset pinky
+        this.resetPinky()
         if (!pageExists) {
             // Page fault
             this.pageFaults++;
@@ -16,15 +18,17 @@ export default class LRUPageReplacement {
                 // Add the new page if there is space
                 this.frames.push({
                     page: page,
-                    countOfPageIndex: this.countOfPageIndex
+                    countOfPageIndex: this.countOfPageIndex,
+                    pinky: true
                 });
                 this.countOfPageIndex++;
             } else {
-                // Replace the least recently used page (LRU logic)
+                // Replace the least recently used page (LRU logic in function findLRUPage)
                 const lruPageIndex = this.findLRUPage();
                 this.frames.splice(lruPageIndex, 1, {
                     page: page,
-                    countOfPageIndex: this.countOfPageIndex
+                    countOfPageIndex: this.countOfPageIndex,
+                    pinky: true
                 });
                 this.countOfPageIndex++;
             }
@@ -53,9 +57,16 @@ export default class LRUPageReplacement {
         return oldestPageIndex;
     }
 
+    // resetPinky use to reset color when render, if pinky = true when render background color will be pink and otherwise backgroud color is white
+    resetPinky(){
+        this.frames.forEach( item => {
+            item.pinky = false;
+        })
+    }
+
     updateResult() {
 
-        const framesContent = this.frames.map(item => item.page).join(', ');
+        const framesContent = this.frames.map(item => `${item.page}:${item.pinky}`).join(', ');
     
         const contentToAppend = `
             <p>Frames: [${framesContent}]</p>
