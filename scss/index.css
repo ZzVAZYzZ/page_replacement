@@ -5,6 +5,10 @@
   list-style: none;
 }
 
+body div {
+  width: 1440px;
+  margin: 0 auto;
+}
 body div nav {
   width: 1440px; /* Ensure this width is appropriate for your layout */
   height: 275px;
@@ -20,6 +24,7 @@ body div nav .nav-1 {
 body div nav .nav-1 h1 {
   color: #fff;
   font-size: 50px;
+  text-align: center;
 }
 body div nav .nav-2 {
   display: flex;
@@ -40,4 +45,5 @@ body div nav .nav-2 div h2 {
 }
 body div nav .nav-2 div:hover {
   background-color: #ff7675;
+  color: #fff;
 }/*# sourceMappingURL=index.css.map */

@@ -6,7 +6,10 @@
 }
 
 body {
+  
   div {
+    width: 1440px;
+    margin: 0 auto;
     // navbar
     nav {
       width: 1440px; /* Ensure this width is appropriate for your layout */
@@ -23,6 +26,7 @@ body {
         h1 {
           color: #fff;
           font-size: 50px;
+          text-align: center;
         }
       }
 
@@ -45,6 +49,7 @@ body {
           }
           &:hover {
             background-color: #ff7675;
+            color: #fff;
           }
         }
       }

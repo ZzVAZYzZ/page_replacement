@@ -6,6 +6,7 @@ export default class CLOCKPageReplacement {
         this.pageFaults = 0;
         this.resultElement = resultElement;
         this.pointer = 0; // Con trỏ để theo dõi vị trí hiện tại trong vòng tròn
+        this.pinkyCounter = 1;
     }
 
     accessPage(page) {
@@ -22,9 +23,9 @@ export default class CLOCKPageReplacement {
                     pinky: true
                 });
                 this.clockFrames.push({
-                    referenced: 0,
-                    pinky: false
+                    referenced: 0
                 });
+                this.checkPinkyCounter()
             } else {
                 // Replace a page using the Clock algorithm
                 this.replacePage(page);
@@ -38,12 +39,17 @@ export default class CLOCKPageReplacement {
         this.updateResult();
     }
 
+    //pinkyCouter auto run, and check if pinkyCounter > framsize, reset pinkyCounter
+    checkPinkyCounter(){
+        this.pinkyCounter++;
+        if(this.pinkyCounter > this.frameSize){
+            this.pinkyCounter = 1;
+        }
+    }
+
     // resetPinky use to reset color when render, if pinky = true when render background color will be pink and otherwise backgroud color is white
     resetPinky(){
         this.frames.forEach( item => {
-            item.pinky = false;
-        })
-        this.clockFrames.forEach( item => {
             item.pinky = false;
         })
     }
@@ -59,16 +65,16 @@ export default class CLOCKPageReplacement {
                     pinky: true
                 };
                 this.clockFrames[this.pointer] = {
-                    referenced: 0,
-                    pinky: false
+                    referenced: 0
                 };
-                
-                this.pointer = (this.pointer + 1) % this.frameSize; // Di chuyển con trỏ tới vị trí tiếp theo
+                this.checkPinkyCounter();
+                this.pointer = (this.pointer + 1) % this.frameSize; // go to next position
                 break;
             } else {
                 // Set the referenced bit to 0 and move the pointer
                 currentPage.referenced = 0;
                 this.pointer = (this.pointer + 1) % this.frameSize;
+                this.checkPinkyCounter();
             }
         }
     }
@@ -76,11 +82,11 @@ export default class CLOCKPageReplacement {
     updateResult() {
         // Prepare the content to append
         const framesContent = this.frames.map(item => `${item.page}:${item.pinky}`).join(', ');
-        const clockFramesContent = this.clockFrames.map(item => `${item.referenced}:${item.pinky}`).join(', ');
-
+        const clockFramesContent = this.clockFrames.map(item => `${item.referenced}`).join(', ');
+        const pinkyCounter = this.pinkyCounter;
         // Create HTML content to append
         const contentToAppend = `
-            <p>Frames: [${framesContent}] AND Clock Frames: [${clockFramesContent}]</p>
+            <p>Frames: [${framesContent}] AND Clock Frames: [${clockFramesContent}] AND pinkyCounter:${pinkyCounter} </p>
         `;
 
         // Clear previous content and append new content to resultElement
