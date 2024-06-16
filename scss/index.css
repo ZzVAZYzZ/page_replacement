@@ -229,7 +229,7 @@ body .contain footer div div div .facebook-icon .fb {
   font-size: 50px;
   color: #5cb8ff;
 }
-body .contain footer div div div div h4 {
+body .contain footer div div div div p {
   font-size: 24px;
   font-family: "Playfair Display", serif;
   text-align: center;
@@ -244,7 +244,7 @@ body .contain footer div div div .email-icon .email {
   font-size: 50px;
   color: #eb4d4b;
 }
-body .contain footer div div div div h4 {
+body .contain footer div div div div p {
   font-size: 24px;
   font-family: "Playfair Display", serif;
   text-align: center;
@@ -259,7 +259,7 @@ body .contain footer div div div .github-icon .github {
   font-size: 50px;
   color: #fff;
 }
-body .contain footer div div div div h4 {
+body .contain footer div div div div p {
   font-size: 24px;
   font-family: "Playfair Display", serif;
   text-align: center;
