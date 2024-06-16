@@ -48,5 +48,6 @@ runButton.addEventListener('click', ()=>{
         document.getElementById('tutor').innerHTML = tutor.howToUseThisWebSite;
         document.getElementById('tableContainer').style.display='none';
         document.getElementById('clockContainer').style.display='none';
+        document.getElementById('pageFault').innerHTML='';
     }
 });
