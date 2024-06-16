@@ -206,11 +206,20 @@ body {
         }
       }
     }
+
+    #pageFault{
+      width: 1300px;
+      height: 32px;
+      margin: 0 auto 64px auto;
+      font-size: 32px;
+      font-family: "Playfair Display", serif;
+    }
+
     .hr-end {
       width: 1300px;
       margin: 64px auto;
     }
-
+    
     // footer
     footer {
       width: 1440px;
@@ -411,26 +420,93 @@ body {
       width: 50px;
       display: flex;
       flex-direction: column;
+      font-family: "Playfair Display", serif;
+      
       .header-table-div{
         width: 50px;
         height: 50px;
-        border: 1px solid #000;
+        border: .5px solid #000;
         font-size: 14px;
         text-align: center;
         line-height: 50px; 
+        font-family: "Playfair Display", serif;
       }
       .content-table-div{
         width: 50px;
         height: 50px;
-        border: 1px solid #000;
-        font-size: 18px;
+        border: .5px solid #000;
+        font-size: 24px;
         text-align: center;
         line-height: 50px;
+        font-family: "Playfair Display", serif;
       }
     }
   }
 }
 
+#clockContainer{
+  width: 1440px;
+  margin-top: 50px;
+  .clock-table{
+    width: 1302px;
+    background-color: #fff;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    border: .5px solid #000;
+    &::-webkit-scrollbar{
+      width: 15px;
+      height: 15px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #fff; 
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #ff7675; 
+    }
+    .clock-table-title{
+      width: 1302px;
+      height: 50px;
+      color: #000;
+      font-family: "Playfair Display", serif;
+      font-size: 32px;
+      line-height: 50px;
+      text-align: center;
+    }
+    .clock-cell-zone{
+      width: 1302px;
+      display: flex;
+      flex-direction: row;
+      .first-clock-column{
+        width: 50px;
+        display: flex;
+        flex-direction: column;
+        .first-clock-div{
+          width: 50px;
+          height: 50px;
+          border: .5px solid #fff;
+        }
+      }
+      
+      .clock-auto-column{
+        width: 50px;
+        display: flex;
+        flex-direction: column;
+        .clock-auto-div{
+          width: 50px;
+          aspect-ratio: 1/1;
+          border: .5px solid #000;
+          font-size: 24px;
+          font-family: "Playfair Display", serif;
+          line-height: 50px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
 
 .pinky{
   color: #fff;

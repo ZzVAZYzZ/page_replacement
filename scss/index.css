@@ -188,6 +188,13 @@ body .contain #tutor .tutor div ul li p {
   font-size: 50px;
   font-family: "Playfair Display", serif;
 }
+body .contain #pageFault {
+  width: 1300px;
+  height: 32px;
+  margin: 0 auto 64px auto;
+  font-size: 32px;
+  font-family: "Playfair Display", serif;
+}
 body .contain .hr-end {
   width: 1300px;
   margin: 64px auto;
@@ -379,22 +386,88 @@ body .contain .reference-validation-modal-wrapper .reference-validation-modal .m
   width: 50px;
   display: flex;
   flex-direction: column;
+  font-family: "Playfair Display", serif;
 }
 #tableContainer .page-table .title-div .header-table-div {
   width: 50px;
   height: 50px;
-  border: 1px solid #000;
+  border: 0.5px solid #000;
   font-size: 14px;
   text-align: center;
   line-height: 50px;
+  font-family: "Playfair Display", serif;
 }
 #tableContainer .page-table .title-div .content-table-div {
   width: 50px;
   height: 50px;
-  border: 1px solid #000;
-  font-size: 18px;
+  border: 0.5px solid #000;
+  font-size: 24px;
   text-align: center;
   line-height: 50px;
+  font-family: "Playfair Display", serif;
+}
+
+#clockContainer {
+  width: 1440px;
+  margin-top: 50px;
+}
+#clockContainer .clock-table {
+  width: 1302px;
+  background-color: #fff;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  border: 0.5px solid #000;
+}
+#clockContainer .clock-table::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+#clockContainer .clock-table::-webkit-scrollbar-track {
+  background: #fff;
+}
+#clockContainer .clock-table::-webkit-scrollbar-thumb {
+  background: #ff7675;
+}
+#clockContainer .clock-table .clock-table-title {
+  width: 1302px;
+  height: 50px;
+  color: #000;
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  line-height: 50px;
+  text-align: center;
+}
+#clockContainer .clock-table .clock-cell-zone {
+  width: 1302px;
+  display: flex;
+  flex-direction: row;
+}
+#clockContainer .clock-table .clock-cell-zone .first-clock-column {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+}
+#clockContainer .clock-table .clock-cell-zone .first-clock-column .first-clock-div {
+  width: 50px;
+  height: 50px;
+  border: 0.5px solid #fff;
+}
+#clockContainer .clock-table .clock-cell-zone .clock-auto-column {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+}
+#clockContainer .clock-table .clock-cell-zone .clock-auto-column .clock-auto-div {
+  width: 50px;
+  aspect-ratio: 1/1;
+  border: 0.5px solid #000;
+  font-size: 24px;
+  font-family: "Playfair Display", serif;
+  line-height: 50px;
+  text-align: center;
 }
 
 .pinky {

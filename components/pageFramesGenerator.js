@@ -12,9 +12,9 @@ const tableWrappler = document.createElement('div');
 tableWrappler.classList.add('page-table');
 
 
-// param: framsize, referenceArray[{page,pinky}]
-//When click Run button, and excute firstTitleColumn 1
+//When click Run button, and excute firstTitleColumn one time
 export const firstTitleColumn = (framsize) => {
+    document.getElementById('tableContainer').style.display='block'
     tableWrappler.replaceChildren();
     const titleDiv = document.createElement('div');
     titleDiv.classList.add('title-div');
@@ -22,11 +22,13 @@ export const firstTitleColumn = (framsize) => {
     const indexDiv = document.createElement('div');
     indexDiv.innerHTML = 'INDEX';
     indexDiv.classList.add('header-table-div');
+    
     titleDiv.appendChild(indexDiv);
 
     const refDiv = document.createElement('div');
     refDiv.innerHTML='REF';
     refDiv.classList.add('header-table-div');
+    refDiv.style.backgroundColor='#C7ECEE';
     titleDiv.appendChild(refDiv);
 
     
@@ -55,7 +57,7 @@ export const resetReferenceCount = () => {
 }
 
 
-
+//auto add column when updateresult in classes execute
 export const addOnColumn = (reference, framsize, pageResult) => {
     const autoColumn = document.createElement('div');
     autoColumn.classList.add('title-div');
@@ -74,6 +76,7 @@ export const addOnColumn = (reference, framsize, pageResult) => {
     referenceDiv.innerHTML = refValue;
     referenceCount++;
     referenceDiv.classList.add('content-table-div');
+    referenceDiv.style.backgroundColor='#C7ECEE';
     autoColumn.appendChild(referenceDiv);
 
     // pagefault div
@@ -97,7 +100,8 @@ export const addOnColumn = (reference, framsize, pageResult) => {
     tableWrappler.appendChild(autoColumn);
 }
 
-//test
+
+//WORK FLOW
 
 //after click RUN button. execute this function one time
 
@@ -128,5 +132,6 @@ export const addOnColumn = (reference, framsize, pageResult) => {
         autoDiv{
         
         }
+        ...
     }
 */

@@ -1,5 +1,5 @@
 import { addOnColumn,resetReferenceCount } from "../components/pageFramesGenerator.js";
-
+import  {addOnClockColumn}  from "../components/clockFramesGenerator.js";
 
 export default class CLOCKPageReplacement {
     constructor(frameSize) {
@@ -24,9 +24,7 @@ export default class CLOCKPageReplacement {
                     page: page,
                     pinky: true
                 });
-                this.clockFrames.push({
-                    referenced: 0
-                });
+                this.clockFrames.push(0);
                 this.checkPinkyCounter()
             } else {
                 // Replace a page using the Clock algorithm
@@ -34,7 +32,7 @@ export default class CLOCKPageReplacement {
             }
         } else {
             // Page already exists, set its referenced bit to 1
-            this.clockFrames[pageIndex].referenced = 1;
+            this.clockFrames[pageIndex] = 1;
         }
 
         // Update result in DOM
@@ -61,21 +59,19 @@ export default class CLOCKPageReplacement {
         while (true) {
             const currentPage = this.clockFrames[this.pointer];
 
-            if (currentPage.referenced === 0) {
+            if (currentPage === 0) {
                 // Replace this page
                 this.frames[this.pointer] = {
                     page: page,
                     pinky: true
                 };
-                this.clockFrames[this.pointer] = {
-                    referenced: 0
-                };
+                this.clockFrames[this.pointer] = 0;
                 this.checkPinkyCounter();
                 this.pointer = (this.pointer + 1) % this.frameSize; // go to next position
                 break;
             } else {
                 // Set the referenced bit to 0 and move the pointer
-                currentPage.referenced = 0;
+                this.clockFrames[this.pointer] = 0;
                 this.pointer = (this.pointer + 1) % this.frameSize;
                 this.checkPinkyCounter();
             }
@@ -84,9 +80,8 @@ export default class CLOCKPageReplacement {
 
     updateResult(page) {
         // Prepare the content to append
-        const clockFramesContent = this.clockFrames.map(item => `${item.referenced}`).join(', ');
-        const pinkyCounter = this.pinkyCounter;
         addOnColumn(page,this.frameSize,this.frames);
+        addOnClockColumn(this.pinkyCounter,this.frameSize,this.clockFrames);
     }
 
     getPageFaults() {
