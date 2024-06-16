@@ -126,7 +126,7 @@ body {
             width: 1164px;
             height: 56px;
             padding: 0 15px;
-            
+
             input {
               width: 1118px;
               height: 52px;
@@ -134,7 +134,6 @@ body {
               padding: 0 23px;
               border: none;
               border: 1px solid #000;
-              
             }
           }
         }
@@ -161,36 +160,35 @@ body {
       }
     }
     // result zone
-    .hr-start{
+    .hr-start {
       width: 1300px;
       margin: 0 auto 64px auto;
     }
-    #result{
+    #result {
       width: 1300px;
       margin: 0 auto;
-      .tutor{
+      .tutor {
         width: 1164px;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        div{
+        div {
           width: 100%;
-          h2{
+          h2 {
             text-align: center;
             font-size: 50px;
             font-family: "Playfair Display", serif;
           }
         }
-        div{
+        div {
           margin-top: 58px;
-          ul{
+          ul {
             display: flex;
             flex-direction: column;
             gap: 58px;
-            li{
-              
-              p{
+            li {
+              p {
                 font-size: 50px;
                 font-family: "Playfair Display", serif;
               }
@@ -199,30 +197,30 @@ body {
         }
       }
     }
-    .hr-end{
+    .hr-end {
       width: 1300px;
       margin: 64px auto;
     }
 
     // footer
-    footer{
+    footer {
       width: 1440px;
       height: 250px;
       background-color: #2e2e2e;
-      div{
+      div {
         width: 794px;
         height: 100%;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        div{
+        div {
           width: 100%;
           height: 69px;
           display: flex;
           justify-content: center;
           align-items: center;
-          h2{
+          h2 {
             width: 100%;
             text-align: center;
             font-size: 32px;
@@ -230,7 +228,7 @@ body {
             color: #fff;
           }
         }
-        div{
+        div {
           width: 100%;
           display: flex;
           flex-direction: row;
@@ -238,18 +236,18 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
-          div{
+          div {
             display: flex;
             flex-direction: column;
             cursor: pointer;
-            .facebook-icon{
-              .fb{
+            .facebook-icon {
+              .fb {
                 font-size: 50px;
                 color: #5cb8ff;
               }
             }
-            div{
-              h4{
+            div {
+              h4 {
                 font-size: 24px;
                 font-family: "Playfair Display", serif;
                 text-align: center;
@@ -257,18 +255,18 @@ body {
               }
             }
           }
-          div{
+          div {
             display: flex;
             flex-direction: column;
             cursor: pointer;
-            .email-icon{
-              .email{
+            .email-icon {
+              .email {
                 font-size: 50px;
                 color: #eb4d4b;
               }
             }
-            div{
-              h4{
+            div {
+              h4 {
                 font-size: 24px;
                 font-family: "Playfair Display", serif;
                 text-align: center;
@@ -276,18 +274,18 @@ body {
               }
             }
           }
-          div{
+          div {
             display: flex;
             flex-direction: column;
             cursor: pointer;
-            .github-icon{
-              .github{
+            .github-icon {
+              .github {
                 font-size: 50px;
                 color: #fff;
               }
             }
-            div{
-              h4{
+            div {
+              h4 {
                 font-size: 24px;
                 font-family: "Playfair Display", serif;
                 text-align: center;
@@ -296,17 +294,79 @@ body {
             }
           }
         }
-        div{
+        div {
           width: 100%;
           height: 69px;
           display: flex;
           justify-content: center;
           align-items: center;
-          p{
+          p {
             text-align: center;
             font-size: 24px;
             font-family: "Playfair Display", serif;
             color: #fff;
+          }
+        }
+      }
+    }
+
+    //POP UP MODAL
+    //reference validation modal
+    .reference-validation-modal-wrapper {
+      position: fixed;
+      display: none;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1440px;
+      height: 100vh;
+      background-color: rgba(230, 217, 217, 0.6);
+
+      .reference-validation-modal {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .modal-wrapper {
+          width: 1000px;
+          height: 600px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: #fff;
+          border: 1px solid #ff7675;
+          margin: 0 auto;
+
+          .modal-text {
+            width: 680px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; /* Đưa nội dung của thẻ <p> xuống đáy */
+            p {
+              font-size: 32px;
+              font-family: "Playfair Display", serif;
+            }
+          }
+
+          .modal-button {
+            width: 100%;
+            height: 258px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button {
+              width: 110px;
+              height: 58px;
+              font-size: 32px;
+              color: #fff;
+              background-color: #ff7675;
+              font-family: "Playfair Display", serif;
+              cursor: pointer;
+            }
           }
         }
       }

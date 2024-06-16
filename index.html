@@ -121,12 +121,31 @@
                     </div>
                 </div>
             </footer>
-        </div>
+            <!-- POP UP MODAL -->
+            
+
+            <div class="reference-validation-modal-wrapper" id="validationModal">
+                <div class="reference-validation-modal">
+                    <div class="modal-wrapper">
+                        <div class="modal-text">
+                            <p>
+                                PLEASE ONLY ENTER NUMBER OR SPACE IN REFERENCE INPUT<br><br>
+                                Example: 1 2 3 4 2 1 5 6 2 1 2 3 7 6 3 2 1 2 3 6
+                            </p>
+                        </div>
+                        <div class="modal-button">
+                            <button id='validationModalButton'>OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
     </div>
     <script type="module" src="./events/runButtonClickEvent.js"></script>
     <script type="module" src="./events/agoClickEvent.js"></script>
     <script type="module" src="./start/firstRunStart.js"></script>
     <script type="module" src="./events/frameChooseEvent.js"></script>
+    <script type="module" src="./events/validationModalButtonClick.js"></script>
 </body>
 
 </html>

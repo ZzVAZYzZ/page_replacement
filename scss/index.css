@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 * {
   margin: 0;
@@ -276,4 +277,59 @@ body .contain footer div div p {
   font-size: 24px;
   font-family: "Playfair Display", serif;
   color: #fff;
+}
+body .contain .reference-validation-modal-wrapper {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1440px;
+  height: 100vh;
+  background-color: rgba(230, 217, 217, 0.6);
+}
+body .contain .reference-validation-modal-wrapper .reference-validation-modal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper {
+  width: 1000px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ff7675;
+  margin: 0 auto;
+}
+body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper .modal-text {
+  width: 680px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Đưa nội dung của thẻ <p> xuống đáy */
+}
+body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper .modal-text p {
+  font-size: 32px;
+  font-family: "Playfair Display", serif;
+}
+body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper .modal-button {
+  width: 100%;
+  height: 258px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper .modal-button button {
+  width: 110px;
+  height: 58px;
+  font-size: 32px;
+  color: #fff;
+  background-color: #ff7675;
+  font-family: "Playfair Display", serif;
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */
