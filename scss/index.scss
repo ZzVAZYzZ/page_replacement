@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
 * {
   margin: 0;
@@ -9,16 +8,18 @@
 }
 
 body {
-  .contain{
+  background-color: #dff9fb;
+  .contain {
     width: 1440px;
     margin: 0 auto;
+    background-color: #fff;
     div {
       width: 1440px;
       // navbar
       nav {
         width: 1440px; /* Ensure this width is appropriate for your layout */
         height: 275px;
-  
+
         .nav-1 {
           width: 100%;
           height: 130px;
@@ -26,21 +27,22 @@ body {
           display: flex;
           align-items: center;
           justify-content: center;
-  
+
           h1 {
+            width: 100%;
             color: #fff;
             font-size: 50px;
             text-align: center;
             font-family: "Playfair Display", serif;
           }
         }
-  
+
         .nav-2 {
           display: flex;
           flex-direction: row;
           width: 100%;
           height: 145px;
-  
+
           div {
             width: 360px;
             height: 145px;
@@ -49,13 +51,9 @@ body {
             align-items: center;
             border: 1px solid #000;
             cursor: pointer;
-            h2 {
+            p {
               font-size: 50px;
               font-family: "Playfair Display", serif;
-            }
-            &:hover {
-              background-color: #ff7675;
-              color: #fff;
             }
           }
         }
@@ -63,17 +61,18 @@ body {
       // input zone
       div {
         width: 1440px;
+        //frame choice
         .Frame-choice-wrapper {
           width: 1440px;
           display: flex;
           justify-content: flex-end;
-          margin: 36px -14px;
-           div{
+          margin: 32px -14px;
+          div {
             display: flex;
             flex-direction: row;
             width: 420px;
             div {
-              h3 {
+              p {
                 font-size: 32px;
                 line-height: 49px;
                 text-align: center;
@@ -101,37 +100,216 @@ body {
                       color: #fff;
                     }
                   }
-                  
                 }
               }
             }
           }
-          //input reference
-          div {
-            div {
-              h2{
-  
-              }
+        }
+        //input reference
+        .reference {
+          display: flex;
+          flex-direction: row;
+          width: 1440px;
+          height: 60px;
+          margin-bottom: 35px;
+          .reference-title {
+            width: 262px;
+            height: 60px;
+            p {
+              font-size: 32px;
+              font-family: "Playfair Display", serif;
+              line-height: 56px;
+              text-align: center;
             }
-            div {
-              input{
-  
+          }
+          .reference-input {
+            width: 1164px;
+            height: 56px;
+            padding: 0 15px;
+            
+            input {
+              width: 1118px;
+              height: 52px;
+              font-size: 32px;
+              padding: 0 23px;
+              border: none;
+              border: 1px solid #000;
+              
+            }
+          }
+        }
+        // RUN button
+        .run-button-wrapper {
+          width: 1366px;
+          display: flex;
+          justify-content: end;
+          margin-bottom: 35px;
+          div {
+            width: 110px;
+            height: 56px;
+            button {
+              width: 100%;
+              height: 100%;
+              font-size: 32px;
+              color: #fff;
+              background-color: #ff7675;
+              font-family: "Playfair Display", serif;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    // result zone
+    .hr-start{
+      width: 1300px;
+      margin: 0 auto 64px auto;
+    }
+    #result{
+      width: 1300px;
+      margin: 0 auto;
+      .tutor{
+        width: 1164px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        div{
+          width: 100%;
+          h2{
+            text-align: center;
+            font-size: 50px;
+            font-family: "Playfair Display", serif;
+          }
+        }
+        div{
+          margin-top: 58px;
+          ul{
+            display: flex;
+            flex-direction: column;
+            gap: 58px;
+            li{
+              
+              p{
+                font-size: 50px;
+                font-family: "Playfair Display", serif;
               }
             }
           }
         }
       }
-  
-      // RUN button
-      div{
-          div{
-              button{
-                  
-              }
-          }
-      }
-    
     }
-      // result zone
+    .hr-end{
+      width: 1300px;
+      margin: 64px auto;
+    }
+
+    // footer
+    footer{
+      width: 1440px;
+      height: 250px;
+      background-color: #2e2e2e;
+      div{
+        width: 794px;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        div{
+          width: 100%;
+          height: 69px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          h2{
+            width: 100%;
+            text-align: center;
+            font-size: 32px;
+            font-family: "Playfair Display", serif;
+            color: #fff;
+          }
+        }
+        div{
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          height: 111px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          div{
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            .facebook-icon{
+              .fb{
+                font-size: 50px;
+                color: #5cb8ff;
+              }
+            }
+            div{
+              h4{
+                font-size: 24px;
+                font-family: "Playfair Display", serif;
+                text-align: center;
+                color: #fff;
+              }
+            }
+          }
+          div{
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            .email-icon{
+              .email{
+                font-size: 50px;
+                color: #eb4d4b;
+              }
+            }
+            div{
+              h4{
+                font-size: 24px;
+                font-family: "Playfair Display", serif;
+                text-align: center;
+                color: #fff;
+              }
+            }
+          }
+          div{
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            .github-icon{
+              .github{
+                font-size: 50px;
+                color: #fff;
+              }
+            }
+            div{
+              h4{
+                font-size: 24px;
+                font-family: "Playfair Display", serif;
+                text-align: center;
+                color: #fff;
+              }
+            }
+          }
+        }
+        div{
+          width: 100%;
+          height: 69px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          p{
+            text-align: center;
+            font-size: 24px;
+            font-family: "Playfair Display", serif;
+            color: #fff;
+          }
+        }
+      }
+    }
   }
 }

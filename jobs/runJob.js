@@ -1,11 +1,9 @@
-import FIFOPageReplacement from './classes/FIFOPageReplacement.js';
-import LRUPageReplacement from './classes/LRUPageReplacement.js';
-import OPTIMALPageReplacement from './classes/OPTIMALPageReplacement.js';
-import CLOCKPageReplacement from './classes/CLOCKPageReplacement.js';
+import FIFOPageReplacement from '../classes/FIFOPageReplacement.js';
+import LRUPageReplacement from '../classes/LRUPageReplacement.js';
+import OPTIMALPageReplacement from '../classes/OPTIMALPageReplacement.js';
+import CLOCKPageReplacement from '../classes/CLOCKPageReplacement.js';
 
-const frameChoice = 4;
-
-window.runFIFO = () => {
+export const runFIFO = (frameChoice) => {
     const inputValue = document.getElementById('referenceDetail').value.trim();
     const pages = inputValue.split(' ').map(Number);
     const result = document.getElementById('result');
@@ -19,7 +17,7 @@ window.runFIFO = () => {
     result.innerHTML += `Total page faults: ${totalPageFaults}`;
 }
 
-window.runLRU = () => {
+export const runLRU = (frameChoice) => {
     const inputValue = document.getElementById('referenceDetail').value.trim();
     const pages = inputValue.split(' ').map(Number);
     const result = document.getElementById('result');
@@ -30,7 +28,7 @@ window.runLRU = () => {
     result.innerHTML += `Total page faults: ${totalPageFaults}`;
 }
 
-window.runOPTIMAL = () => {
+export const runOPTIMAL = (frameChoice) => {
     const inputValue = document.getElementById('referenceDetail').value.trim();
     const pages = inputValue.split(' ').map(Number);
     const result = document.getElementById('result');
@@ -41,7 +39,7 @@ window.runOPTIMAL = () => {
     result.innerHTML += `Total page faults: ${totalPageFaults}`;
 }
 
-window.runCLOCK = () => {
+export const runCLOCK = (frameChoice) => {
     const inputValue = document.getElementById('referenceDetail').value.trim();
     const pages = inputValue.split(' ').map(Number);
     const result = document.getElementById('result');
@@ -51,3 +49,4 @@ window.runCLOCK = () => {
     const totalPageFaults = optimal.getPageFaults();
     result.innerHTML += `Total page faults: ${totalPageFaults}`;
 }
+

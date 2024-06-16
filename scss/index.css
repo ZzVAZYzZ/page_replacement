@@ -6,9 +6,13 @@
   list-style: none;
 }
 
+body {
+  background-color: #dff9fb;
+}
 body .contain {
   width: 1440px;
   margin: 0 auto;
+  background-color: #fff;
 }
 body .contain div {
   width: 1440px;
@@ -26,6 +30,7 @@ body .contain div nav .nav-1 {
   justify-content: center;
 }
 body .contain div nav .nav-1 h1 {
+  width: 100%;
   color: #fff;
   font-size: 50px;
   text-align: center;
@@ -46,13 +51,9 @@ body .contain div nav .nav-2 div {
   border: 1px solid #000;
   cursor: pointer;
 }
-body .contain div nav .nav-2 div h2 {
+body .contain div nav .nav-2 div p {
   font-size: 50px;
   font-family: "Playfair Display", serif;
-}
-body .contain div nav .nav-2 div:hover {
-  background-color: #ff7675;
-  color: #fff;
 }
 body .contain div div {
   width: 1440px;
@@ -61,14 +62,14 @@ body .contain div div .Frame-choice-wrapper {
   width: 1440px;
   display: flex;
   justify-content: flex-end;
-  margin: 36px -14px;
+  margin: 32px -14px;
 }
 body .contain div div .Frame-choice-wrapper div {
   display: flex;
   flex-direction: row;
   width: 420px;
 }
-body .contain div div .Frame-choice-wrapper div div h3 {
+body .contain div div .Frame-choice-wrapper div div p {
   font-size: 32px;
   line-height: 49px;
   text-align: center;
@@ -92,5 +93,187 @@ body .contain div div .Frame-choice-wrapper div div ul li button {
 }
 body .contain div div .Frame-choice-wrapper div div ul li button:hover {
   background-color: #ff7675;
+  color: #fff;
+}
+body .contain div div .reference {
+  display: flex;
+  flex-direction: row;
+  width: 1440px;
+  height: 60px;
+  margin-bottom: 35px;
+}
+body .contain div div .reference .reference-title {
+  width: 262px;
+  height: 60px;
+}
+body .contain div div .reference .reference-title p {
+  font-size: 32px;
+  font-family: "Playfair Display", serif;
+  line-height: 56px;
+  text-align: center;
+}
+body .contain div div .reference .reference-input {
+  width: 1164px;
+  height: 56px;
+  padding: 0 15px;
+}
+body .contain div div .reference .reference-input input {
+  width: 1118px;
+  height: 52px;
+  font-size: 32px;
+  padding: 0 23px;
+  border: none;
+  border: 1px solid #000;
+}
+body .contain div div .run-button-wrapper {
+  width: 1366px;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 35px;
+}
+body .contain div div .run-button-wrapper div {
+  width: 110px;
+  height: 56px;
+}
+body .contain div div .run-button-wrapper div button {
+  width: 100%;
+  height: 100%;
+  font-size: 32px;
+  color: #fff;
+  background-color: #ff7675;
+  font-family: "Playfair Display", serif;
+  cursor: pointer;
+}
+body .contain .hr-start {
+  width: 1300px;
+  margin: 0 auto 64px auto;
+}
+body .contain #result {
+  width: 1300px;
+  margin: 0 auto;
+}
+body .contain #result .tutor {
+  width: 1164px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .contain #result .tutor div {
+  width: 100%;
+}
+body .contain #result .tutor div h2 {
+  text-align: center;
+  font-size: 50px;
+  font-family: "Playfair Display", serif;
+}
+body .contain #result .tutor div {
+  margin-top: 58px;
+}
+body .contain #result .tutor div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 58px;
+}
+body .contain #result .tutor div ul li p {
+  font-size: 50px;
+  font-family: "Playfair Display", serif;
+}
+body .contain .hr-end {
+  width: 1300px;
+  margin: 64px auto;
+}
+body .contain footer {
+  width: 1440px;
+  height: 250px;
+  background-color: #2e2e2e;
+}
+body .contain footer div {
+  width: 794px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .contain footer div div {
+  width: 100%;
+  height: 69px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .contain footer div div h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  font-family: "Playfair Display", serif;
+  color: #fff;
+}
+body .contain footer div div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 111px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .contain footer div div div {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+body .contain footer div div div .facebook-icon .fb {
+  font-size: 50px;
+  color: #5cb8ff;
+}
+body .contain footer div div div div h4 {
+  font-size: 24px;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  color: #fff;
+}
+body .contain footer div div div {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+body .contain footer div div div .email-icon .email {
+  font-size: 50px;
+  color: #eb4d4b;
+}
+body .contain footer div div div div h4 {
+  font-size: 24px;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  color: #fff;
+}
+body .contain footer div div div {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+body .contain footer div div div .github-icon .github {
+  font-size: 50px;
+  color: #fff;
+}
+body .contain footer div div div div h4 {
+  font-size: 24px;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  color: #fff;
+}
+body .contain footer div div {
+  width: 100%;
+  height: 69px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .contain footer div div p {
+  text-align: center;
+  font-size: 24px;
+  font-family: "Playfair Display", serif;
   color: #fff;
 }/*# sourceMappingURL=index.css.map */

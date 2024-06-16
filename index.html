@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculate Page Replacement♥♥</title>
+    <title>Page Replacement Calculator</title>
     <link rel="stylesheet" href="./scss/index.css">
+    <script src="https://kit.fontawesome.com/f6031842b5.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -22,17 +23,17 @@
                 </div>
                 <!-- nav 2 -->
                 <div class="nav-2">
-                    <div>
-                        <h2>FIFO</h2>
+                    <div id="FIFOChoice">
+                        <p>FIFO</p>
                     </div>
-                    <div>
-                        <h2>LRU</h2>
+                    <div id="LRUChoice">
+                        <p>LRU</p>
                     </div>
-                    <div>
-                        <h2>OPTIMAL</h2>
+                    <div id="OPTIMALChoice">
+                        <p>OPTIMAL</p>
                     </div>
-                    <div>
-                        <h2>CLOCK</h2>
+                    <div id="CLOCKChoice">
+                        <p>CLOCK</p>
                     </div>
                 </div>
             </nav>
@@ -42,34 +43,32 @@
                <div class="Frame-choice-wrapper">
                 <div >
                     <div>
-                        <h3>FRAME:</h3>
+                        <p>FRAME:</p>
                     </div>
                     <div>
                         <ul>
-                            <li><button>1</button></li>
-                            <li><button>2</button></li>
-                            <li><button>3</button></li>
-                            <li><button>4</button></li>
-                            <li><button>5</button></li>
+                            <li><button id="frameOne">1</button></li>
+                            <li><button id="frameTwo">2</button></li>
+                            <li><button id="frameThree">3</button></li>
+                            <li><button id="frameFour">4</button></li>
+                            <li><button id="frameFive">5</button></li>
                         </ul>
                     </div>
                 </div>
                </div>
                <!-- input reference -->
-               <div>
-                <div>
-                    <h2>REFERENCE:</h2>
+               <div class="reference">
+                    <div class="reference-title">
+                        <p>REFERENCE:</p>
+                    </div>
+                    <div class="reference-input">
+                        <input type="text" id="referenceDetail">
+                    </div>
                 </div>
-                <div>
-                    <input type="text" id="referenceDetail">
-                </div>
-    
-               </div>
-    
                <!-- RUN button -->
-               <div>
+               <div class="run-button-wrapper">
                     <div>
-                        <button onclick="runCLOCK()">RUN</button>
+                        <button id="runButton">RUN</button>
                     </div>
                </div>
                
@@ -77,13 +76,57 @@
     
            
             <!-- result zone -->
+            <hr class="hr-start">
+
             <div id="result">
-    
+                
             </div>
-    
+
+            <hr class="hr-end">
+
+            <!-- footer -->
+            <footer>
+                <div>
+                    <div>
+                        <h2>CONTACT</h2>
+                    </div>
+                    <div>
+                        <div>
+                            <div class="facebook-icon">
+                                <i class="fab fa-facebook-square fb"></i>
+                            </div>
+                            <div>
+                                <h4>FACEBOOK</h4>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="email-icon">
+                                <i class="fa-regular fa-envelope email"></i>
+                            </div>
+                            <div>
+                                <h4>EMAIL</h4>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="github-icon">
+                                <i class="fa-brands fa-github github"></i>
+                            </div>
+                            <div>
+                                <h4>GITHUB</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>© 2024 PAGE REPLACEMENT CALCULATOR - DESIGNED BY VAZY</p>
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
-    <script type="module" src="./index.js"></script>
+    <script type="module" src="./events/runButtonClickEvent.js"></script>
+    <script type="module" src="./events/agoClickEvent.js"></script>
+    <script type="module" src="./start/firstRunStart.js"></script>
+    <script type="module" src="./events/frameChooseEvent.js"></script>
 </body>
 
 </html>
