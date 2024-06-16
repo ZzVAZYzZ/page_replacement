@@ -1,10 +1,12 @@
+import { addOnColumn,resetReferenceCount } from "../components/pageFramesGenerator.js";
+
+
 export default class CLOCKPageReplacement {
-    constructor(frameSize, resultElement) {
+    constructor(frameSize) {
         this.frameSize = frameSize;
         this.frames = [];
         this.clockFrames = []; // Mảng để lưu trạng thái các khung trang trong Clock
         this.pageFaults = 0;
-        this.resultElement = resultElement;
         this.pointer = 0; // Con trỏ để theo dõi vị trí hiện tại trong vòng tròn
         this.pinkyCounter = 1;
     }
@@ -36,7 +38,8 @@ export default class CLOCKPageReplacement {
         }
 
         // Update result in DOM
-        this.updateResult();
+        this.updateResult(page);
+        resetReferenceCount();
     }
 
     //pinkyCouter auto run, and check if pinkyCounter > framsize, reset pinkyCounter
@@ -79,18 +82,11 @@ export default class CLOCKPageReplacement {
         }
     }
 
-    updateResult() {
+    updateResult(page) {
         // Prepare the content to append
-        const framesContent = this.frames.map(item => `${item.page}:${item.pinky}`).join(', ');
         const clockFramesContent = this.clockFrames.map(item => `${item.referenced}`).join(', ');
         const pinkyCounter = this.pinkyCounter;
-        // Create HTML content to append
-        const contentToAppend = `
-            <p>Frames: [${framesContent}] AND Clock Frames: [${clockFramesContent}] AND pinkyCounter:${pinkyCounter} </p>
-        `;
-
-        // Clear previous content and append new content to resultElement
-        this.resultElement.innerHTML += contentToAppend;
+        addOnColumn(page,this.frameSize,this.frames);
     }
 
     getPageFaults() {

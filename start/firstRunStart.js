@@ -13,6 +13,6 @@ import { tutor } from "../utils/tutor.js";
     changeBgTextColor(frameChoice.frameFour,colorHex.pink,colorHex.white)
 
     //tutor first run
-    document.getElementById('result').innerHTML = tutor.howToUseThisWebSite;
+    document.getElementById('tutor').innerHTML = tutor.howToUseThisWebSite;
 
 })()

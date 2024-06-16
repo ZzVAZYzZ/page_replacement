@@ -1,9 +1,10 @@
+import { addOnColumn,resetReferenceCount } from "../components/pageFramesGenerator.js";
+
 export default class FIFOPageReplacement {
-    constructor(frameSize, resultElement) {
+    constructor(frameSize) {
         this.frameSize = frameSize;
         this.frames = [];
         this.pageFaults = 0;
-        this.resultElement = resultElement;
         this.autoBot = 0;
     }   
 
@@ -29,7 +30,8 @@ export default class FIFOPageReplacement {
             this.runAutoBot();
         }
         // Update result in DOM
-        this.updateResult();
+        this.updateResult(page);
+        resetReferenceCount();
     }
 
     // resetPinky use to reset color when render, if pinky = true when render background color will be pink and otherwise backgroud color is white
@@ -47,16 +49,8 @@ export default class FIFOPageReplacement {
         }
     }
 
-    updateResult() {
-        // Prepare the content to append
-        const framesContent = this.frames.map(item => `${item.page}:${item.pinky}`).join(', ');
-        // Create HTML content to append
-        const contentToAppend = `
-            <p>Frames: [${framesContent}]</p>
-        `;
-
-        // Append content to resultElement
-        this.resultElement.insertAdjacentHTML('beforeend', contentToAppend);
+    updateResult(page) {
+        addOnColumn(page,this.frameSize,this.frames);
     }
 
     getPageFaults() {

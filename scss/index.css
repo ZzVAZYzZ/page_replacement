@@ -157,34 +157,34 @@ body .contain .hr-start {
   width: 1300px;
   margin: 0 auto 64px auto;
 }
-body .contain #result {
+body .contain #tutor {
   width: 1300px;
   margin: 0 auto;
 }
-body .contain #result .tutor {
+body .contain #tutor .tutor {
   width: 1164px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-body .contain #result .tutor div {
+body .contain #tutor .tutor div {
   width: 100%;
 }
-body .contain #result .tutor div h2 {
+body .contain #tutor .tutor div h2 {
   text-align: center;
   font-size: 50px;
   font-family: "Playfair Display", serif;
 }
-body .contain #result .tutor div {
+body .contain #tutor .tutor div {
   margin-top: 58px;
 }
-body .contain #result .tutor div ul {
+body .contain #tutor .tutor div ul {
   display: flex;
   flex-direction: column;
   gap: 58px;
 }
-body .contain #result .tutor div ul li p {
+body .contain #tutor .tutor div ul li p {
   font-size: 50px;
   font-family: "Playfair Display", serif;
 }
@@ -350,4 +350,54 @@ body .contain .reference-validation-modal-wrapper .reference-validation-modal .m
   background-color: #ff7675;
   font-family: "Playfair Display", serif;
   cursor: pointer;
+}
+
+#tableContainer {
+  width: 1440px;
+}
+#tableContainer .page-table {
+  width: 1302px;
+  background-color: #fff;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  border: 1px solid #000;
+}
+#tableContainer .page-table::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+#tableContainer .page-table::-webkit-scrollbar-track {
+  background: #fff;
+}
+#tableContainer .page-table::-webkit-scrollbar-thumb {
+  background: #ff7675;
+}
+#tableContainer .page-table .title-div {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+}
+#tableContainer .page-table .title-div .header-table-div {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  font-size: 14px;
+  text-align: center;
+  line-height: 50px;
+}
+#tableContainer .page-table .title-div .content-table-div {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  font-size: 18px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.pinky {
+  color: #fff;
+  background-color: #ff7675;
 }/*# sourceMappingURL=index.css.map */

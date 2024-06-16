@@ -2,47 +2,45 @@ import FIFOPageReplacement from '../classes/FIFOPageReplacement.js';
 import LRUPageReplacement from '../classes/LRUPageReplacement.js';
 import OPTIMALPageReplacement from '../classes/OPTIMALPageReplacement.js';
 import CLOCKPageReplacement from '../classes/CLOCKPageReplacement.js';
+import { resetPageIndexCount } from '../components/pageFramesGenerator.js';
+
 
 export const runFIFO = (frameChoice,inputValue) => {
     const pages = inputValue.split(' ').map(Number);
-    const result = document.getElementById('result');
-    result.innerHTML = "";
-    const fifo = new FIFOPageReplacement(frameChoice,result);
+    
+    const fifo = new FIFOPageReplacement(frameChoice);
 
     pages.forEach(page => fifo.accessPage(page));
     
-    const totalPageFaults = fifo.getPageFaults();
+    resetPageIndexCount();
 
-    result.innerHTML += `Total page faults: ${totalPageFaults}`;
+    const totalPageFaults = fifo.getPageFaults();
 }
 
 export const runLRU = (frameChoice,inputValue) => {
     const pages = inputValue.split(' ').map(Number);
-    const result = document.getElementById('result');
-    result.innerHTML = "";
-    const lru = new LRUPageReplacement(frameChoice,result);
+    
+    const lru = new LRUPageReplacement(frameChoice);
     pages.forEach(page => lru.accessPage(page));
+    resetPageIndexCount();
     const totalPageFaults = lru.getPageFaults();
-    result.innerHTML += `Total page faults: ${totalPageFaults}`;
 }
 
 export const runOPTIMAL = (frameChoice,inputValue) => {
     const pages = inputValue.split(' ').map(Number);
-    const result = document.getElementById('result');
-    result.innerHTML = "";
-    const optimal = new OPTIMALPageReplacement(frameChoice,result);
+    
+    const optimal = new OPTIMALPageReplacement(frameChoice);
     pages.forEach(page => optimal.accessPage(page));
+    resetPageIndexCount();
     const totalPageFaults = optimal.getPageFaults();
-    result.innerHTML += `Total page faults: ${totalPageFaults}`;
 }
 
 export const runCLOCK = (frameChoice,inputValue) => {
     const pages = inputValue.split(' ').map(Number);
-    const result = document.getElementById('result');
-    result.innerHTML = "";
-    const optimal = new CLOCKPageReplacement(frameChoice,result);
+    
+    const optimal = new CLOCKPageReplacement(frameChoice);
     pages.forEach(page => optimal.accessPage(page));
+    resetPageIndexCount();
     const totalPageFaults = optimal.getPageFaults();
-    result.innerHTML += `Total page faults: ${totalPageFaults}`;
 }
 

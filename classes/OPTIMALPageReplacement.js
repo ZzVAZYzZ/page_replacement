@@ -1,3 +1,5 @@
+import { addOnColumn,resetReferenceCount } from "../components/pageFramesGenerator.js";
+
 export default class OPTIMALPageReplacement {
     constructor(frameSize, resultElement) {
         this.frameSize = frameSize;
@@ -40,7 +42,8 @@ export default class OPTIMALPageReplacement {
         }
     
         // Update result in DOM
-        this.updateResult();
+        this.updateResult(page);
+        resetReferenceCount();
     }
     
     findLRUPage() {
@@ -64,15 +67,8 @@ export default class OPTIMALPageReplacement {
         })
     }
 
-    updateResult() {
-
-        const framesContent = this.frames.map(item => `${item.page}:${item.pinky}`).join(', ');
-    
-        const contentToAppend = `
-            <p>Frames: [${framesContent}]</p>
-        `;
-
-        this.resultElement.innerHTML += contentToAppend;
+    updateResult(page) {
+        addOnColumn(page,this.frameSize,this.frames);
     }
     
 

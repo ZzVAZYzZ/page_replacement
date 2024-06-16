@@ -173,7 +173,7 @@ body {
       width: 1300px;
       margin: 0 auto 64px auto;
     }
-    #result {
+    #tutor {
       width: 1300px;
       margin: 0 auto;
       .tutor {
@@ -385,4 +385,54 @@ body {
       }
     }
   }
+}
+#tableContainer{
+  width: 1440px;
+  .page-table{
+    width: 1302px;
+    background-color: #fff;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    border: 1px solid #000;
+    &::-webkit-scrollbar{
+      width: 15px;
+      height: 15px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #fff; 
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #ff7675; 
+    }
+    .title-div{
+      width: 50px;
+      display: flex;
+      flex-direction: column;
+      .header-table-div{
+        width: 50px;
+        height: 50px;
+        border: 1px solid #000;
+        font-size: 14px;
+        text-align: center;
+        line-height: 50px; 
+      }
+      .content-table-div{
+        width: 50px;
+        height: 50px;
+        border: 1px solid #000;
+        font-size: 18px;
+        text-align: center;
+        line-height: 50px;
+      }
+    }
+  }
+}
+
+
+.pinky{
+  color: #fff;
+  background-color: #ff7675;
 }
