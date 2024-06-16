@@ -1,4 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@font-face {
+  font-family: 'Playfair Display';
+  font-weight: 300;
+  src:  url('../assets/fonts/playfairdisplay-variablefont_wght-webfont.woff2') format('woff2'),
+        url('../assets/fonts/playfairdisplay-variablefont_wght-webfont.woff') format('woff');
+}
+
+embed{
+  cursor: pointer;
+}
 
 * {
   margin: 0;
@@ -236,17 +245,18 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
-          div {
+          .icon-wrapper {
             display: flex;
             flex-direction: column;
             cursor: pointer;
             .facebook-icon {
               .fb {
-                font-size: 50px;
-                color: #5cb8ff;
+                width: 50px;
+                height: 50px;
               }
             }
             div {
+              margin-top: 10px;
               p {
                 font-size: 24px;
                 font-family: "Playfair Display", serif;
@@ -261,11 +271,12 @@ body {
             cursor: pointer;
             .email-icon {
               .email {
-                font-size: 50px;
-                color: #eb4d4b;
+                width: 50px;
+                height: 50px;
               }
             }
             div {
+              margin-top: 10px;
               p {
                 font-size: 24px;
                 font-family: "Playfair Display", serif;
@@ -280,11 +291,12 @@ body {
             cursor: pointer;
             .github-icon {
               .github {
-                font-size: 50px;
-                color: #fff;
+                width: 50px;
+                height: 50px;
               }
             }
             div {
+              margin-top: 10px;
               p {
                 font-size: 24px;
                 font-family: "Playfair Display", serif;
@@ -300,6 +312,7 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
+          margin-top: 10px;
           p {
             text-align: center;
             font-size: 24px;

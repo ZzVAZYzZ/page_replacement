@@ -1,5 +1,13 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 300;
+  src: url("../assets/fonts/playfairdisplay-variablefont_wght-webfont.woff2") format("woff2"), url("../assets/fonts/playfairdisplay-variablefont_wght-webfont.woff") format("woff");
+}
+embed {
+  cursor: pointer;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -220,16 +228,19 @@ body .contain footer div div {
   justify-content: center;
   align-items: center;
 }
-body .contain footer div div div {
+body .contain footer div div .icon-wrapper {
   display: flex;
   flex-direction: column;
   cursor: pointer;
 }
-body .contain footer div div div .facebook-icon .fb {
-  font-size: 50px;
-  color: #5cb8ff;
+body .contain footer div div .icon-wrapper .facebook-icon .fb {
+  width: 50px;
+  height: 50px;
 }
-body .contain footer div div div div p {
+body .contain footer div div .icon-wrapper div {
+  margin-top: 10px;
+}
+body .contain footer div div .icon-wrapper div p {
   font-size: 24px;
   font-family: "Playfair Display", serif;
   text-align: center;
@@ -241,8 +252,11 @@ body .contain footer div div div {
   cursor: pointer;
 }
 body .contain footer div div div .email-icon .email {
-  font-size: 50px;
-  color: #eb4d4b;
+  width: 50px;
+  height: 50px;
+}
+body .contain footer div div div div {
+  margin-top: 10px;
 }
 body .contain footer div div div div p {
   font-size: 24px;
@@ -256,8 +270,11 @@ body .contain footer div div div {
   cursor: pointer;
 }
 body .contain footer div div div .github-icon .github {
-  font-size: 50px;
-  color: #fff;
+  width: 50px;
+  height: 50px;
+}
+body .contain footer div div div div {
+  margin-top: 10px;
 }
 body .contain footer div div div div p {
   font-size: 24px;
@@ -271,6 +288,7 @@ body .contain footer div div {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
 }
 body .contain footer div div p {
   text-align: center;
