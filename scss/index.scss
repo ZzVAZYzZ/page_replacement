@@ -1,12 +1,10 @@
+@import './mixins/clientSizeMixin.scss';
+
 @font-face {
   font-family: 'Playfair Display';
   font-weight: 300;
   src:  url('../assets/fonts/playfairdisplay-variablefont_wght-webfont.woff2') format('woff2'),
         url('../assets/fonts/playfairdisplay-variablefont_wght-webfont.woff') format('woff');
-}
-
-embed{
-  cursor: pointer;
 }
 
 * {
@@ -17,18 +15,44 @@ embed{
 }
 
 body {
-  background-color: #dff9fb;
+  background-color: #ECF2FF;
   .contain {
     width: 1440px;
     margin: 0 auto;
     background-color: #fff;
+    @include desktop{
+      width: 1024px;
+    }
+    @include tablet{
+      width: 768px;
+    }
+    @include mobile{
+      width: 480px;
+    }
     div {
       width: 1440px;
+      @include desktop{
+        width: 1024px;
+      }
+      @include tablet{
+        width: 768px;
+      }
+      @include mobile{
+        width: 480px;
+      }
       // navbar
       nav {
         width: 1440px; /* Ensure this width is appropriate for your layout */
-        height: 275px;
-
+        
+        @include desktop{
+          width: 1024px;
+        }
+        @include tablet{
+          width: 768px;
+        }
+        @include mobile{
+          width: 480px;
+        }
         .nav-1 {
           width: 100%;
           height: 130px;
@@ -36,13 +60,30 @@ body {
           display: flex;
           align-items: center;
           justify-content: center;
-
+          @include desktop{
+            height: 110px;
+          }
+          @include tablet{
+            height: 100px;
+          }
+          @include mobile{
+            height: 80px;
+          }
           h1 {
             width: 100%;
             color: #fff;
             font-size: 50px;
             text-align: center;
             font-family: "Playfair Display", serif;
+            @include desktop{
+              font-size: 38px;
+            }
+            @include tablet{
+              font-size: 32px;
+            }
+            @include mobile{
+              font-size: 28px;
+            }
           }
         }
 
@@ -51,6 +92,15 @@ body {
           flex-direction: row;
           width: 100%;
           height: 145px;
+          @include desktop{
+            height: 130px;
+          }
+          @include tablet{
+            height: 120px;
+          }
+          @include mobile{
+            height: 90px;
+          }
 
           div {
             width: 360px;
@@ -60,9 +110,21 @@ body {
             align-items: center;
             border: 1px solid #000;
             cursor: pointer;
+            @include mobile{
+              height: 90px;
+            }
             p {
               font-size: 50px;
               font-family: "Playfair Display", serif;
+              @include desktop{
+                font-size: 38px;
+              }
+              @include tablet{
+                font-size: 32px;
+              }
+              @include mobile{
+                font-size: 24px;
+              }
             }
           }
         }
@@ -70,12 +132,24 @@ body {
       // input zone
       div {
         width: 1440px;
+        @include desktop{
+          width: 1024px;
+        }
+        @include tablet{
+          width: 768px;
+        }
+        @include mobile{
+          width: 480px;
+        }
         //frame choice
         .Frame-choice-wrapper {
-          width: 1440px;
+          width: 100%;
           display: flex;
           justify-content: flex-end;
           margin: 32px -14px;
+          @include mobile{
+            margin: 24px -14px;
+          }
           div {
             display: flex;
             flex-direction: row;
@@ -87,6 +161,9 @@ body {
                 text-align: center;
                 margin: 0 auto;
                 font-family: "Playfair Display", serif;
+                @include mobile{
+                  font-size: 24px;
+                }
               }
             }
             div {
@@ -120,6 +197,15 @@ body {
           flex-direction: row;
           width: 1440px;
           height: 60px;
+          @include desktop{
+            width: 1024px;
+          }
+          @include tablet{
+            width: 768px;
+          }
+          @include mobile{
+            width: 480px;
+          }
           margin-bottom: 35px;
           .reference-title {
             width: 262px;
@@ -129,13 +215,18 @@ body {
               font-family: "Playfair Display", serif;
               line-height: 56px;
               text-align: center;
+              @include tablet{
+                font-size: 26px;
+              }
+              @include mobile{
+                font-size: 20px;
+              }
             }
           }
           .reference-input {
-            width: 1164px;
             height: 56px;
             padding: 0 15px;
-
+            
             input {
               width: 1118px;
               height: 52px;
@@ -143,6 +234,15 @@ body {
               padding: 0 23px;
               border: none;
               border: 1px solid #000;
+              @include desktop{
+                width: 750px;
+              }
+              @include tablet{
+                width: 500px;
+              }
+              @include mobile{
+                width: 250px;
+              }
             }
           }
         }
@@ -152,9 +252,22 @@ body {
           display: flex;
           justify-content: end;
           margin-bottom: 35px;
+          @include desktop{
+            width: 950px;
+          }
+          @include tablet{
+            width: 700px;
+          }
+          @include mobile{
+            width: 450px;
+          }
           div {
             width: 110px;
             height: 56px;
+            @include mobile{
+              width: 90px;
+              height: 46px;
+            }
             button {
               width: 100%;
               height: 100%;
@@ -163,6 +276,9 @@ body {
               background-color: #ff7675;
               font-family: "Playfair Display", serif;
               cursor: pointer;
+              @include mobile{
+                font-size: 24px;
+              }
             }
           }
         }
@@ -172,34 +288,83 @@ body {
     .hr-start {
       width: 1300px;
       margin: 0 auto 64px auto;
+      @include desktop{
+        width: 950px;
+      }
+      @include tablet{
+        width: 650px;
+      }
+      @include mobile{
+        width: 450px;
+        margin: 0 auto 44px auto;
+      }
     }
     #tutor {
       width: 1300px;
       margin: 0 auto;
+      @include desktop{
+        width: 950px;
+      }
+      @include tablet{
+        width: 650px;
+      }
+      @include mobile{
+        width: 450px;
+      }
       .tutor {
         width: 1164px;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @include desktop{
+          width: 748px;
+        }
+        @include tablet{
+          width: 620px;
+        }
+        @include mobile{
+          width: 430px;
+        }
         div {
           width: 100%;
           h2 {
             text-align: center;
             font-size: 50px;
             font-family: "Playfair Display", serif;
+            @include desktop{
+              font-size: 32px;
+            }
+            @include tablet{
+              font-size: 26px;
+            }
+            @include mobile{
+              font-size: 22px;
+            }
           }
         }
         div {
           margin-top: 58px;
+          @include mobile{
+            margin-top: 28px;
+          }
           ul {
             display: flex;
             flex-direction: column;
-            gap: 58px;
+            gap: 38px;
             li {
               p {
                 font-size: 50px;
                 font-family: "Playfair Display", serif;
+                @include desktop{
+                  font-size: 28px;
+                }
+                @include tablet{
+                  font-size: 26px;
+                }
+                @include mobile{
+                  font-size: 20px;
+                }
               }
             }
           }
@@ -213,11 +378,33 @@ body {
       margin: 0 auto 64px auto;
       font-size: 32px;
       font-family: "Playfair Display", serif;
+      @include desktop{
+        width: 950px;
+      }
+      @include tablet{
+        width: 650px;
+        font-size: 26px;
+      }
+      @include mobile{
+        width: 450px;
+        font-size: 20px;
+      }
     }
 
     .hr-end {
       width: 1300px;
       margin: 64px auto;
+      @include desktop{
+        width: 950px;
+      }
+      @include tablet{
+        width: 650px;
+      }
+
+      @include mobile{
+        width: 450px;
+        margin: 44px auto;
+      }
     }
     
     // footer
@@ -225,6 +412,15 @@ body {
       width: 1440px;
       height: 250px;
       background-color: #2e2e2e;
+      @include desktop{
+        width: 1024px;
+      }
+      @include tablet{
+        width: 768px;
+      }
+      @include mobile{
+        width: 480px;
+      }
       div {
         width: 794px;
         height: 100%;
@@ -232,6 +428,12 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @include tablet{
+          width: 720px;
+        }
+        @include mobile{
+          width: 430px;
+        }
         div {
           width: 100%;
           height: 69px;
@@ -244,6 +446,15 @@ body {
             font-size: 32px;
             font-family: "Playfair Display", serif;
             color: #fff;
+            @include desktop{
+              font-size: 24px;
+            }
+            @include tablet{
+              font-size: 21px;
+            }
+            @include mobile{
+              font-size: 18px;
+            }
           }
         }
         div {
@@ -262,6 +473,10 @@ body {
               .fb {
                 width: 50px;
                 height: 50px;
+                @include mobile{
+                  width: 30px;
+                  height: 30px;
+                }
               }
             }
             div {
@@ -271,6 +486,15 @@ body {
                 font-family: "Playfair Display", serif;
                 text-align: center;
                 color: #fff;
+                @include desktop{
+                  font-size: 16px;
+                }
+                @include tablet{
+                  font-size: 21px;
+                }
+                @include mobile{
+                  font-size: 18px;
+                }
               }
             }
           }
@@ -282,6 +506,10 @@ body {
               .email {
                 width: 50px;
                 height: 50px;
+                @include mobile{
+                  width: 30px;
+                  height: 30px;
+                }
               }
             }
             div {
@@ -291,6 +519,15 @@ body {
                 font-family: "Playfair Display", serif;
                 text-align: center;
                 color: #fff;
+                @include desktop{
+                  font-size: 16px;
+                }
+                @include tablet{
+                  font-size: 21px;
+                }
+                @include mobile{
+                  font-size: 18px;
+                }
               }
             }
           }
@@ -302,6 +539,10 @@ body {
               .github {
                 width: 50px;
                 height: 50px;
+                @include mobile{
+                  width: 30px;
+                  height: 30px;
+                }
               }
             }
             div {
@@ -311,6 +552,15 @@ body {
                 font-family: "Playfair Display", serif;
                 text-align: center;
                 color: #fff;
+                @include desktop{
+                  font-size: 16px;
+                }
+                @include tablet{
+                  font-size: 21px;
+                }
+                @include mobile{
+                  font-size: 18px;
+                }
               }
             }
           }
@@ -327,6 +577,15 @@ body {
             font-size: 24px;
             font-family: "Playfair Display", serif;
             color: #fff;
+            @include desktop{
+              font-size: 16px;
+            }
+            @include tablet{
+              font-size: 21px;
+            }
+            @include mobile{
+              font-size: 12px;
+            }
           }
         }
       }
@@ -343,7 +602,15 @@ body {
       width: 1440px;
       height: 100vh;
       background-color: rgba(230, 217, 217, 0.6);
-
+      @include desktop{
+        width: 1024px;
+      }
+      @include tablet{
+        width: 768px;
+      }
+      @include mobile{
+        width: 480px;
+      }
       .reference-validation-modal {
         width: 100%;
         height: 100%;
@@ -361,9 +628,20 @@ body {
           background-color: #fff;
           border: 1px solid #ff7675;
           margin: 0 auto;
-
+          @include desktop{
+            width: 800px;
+            height: 400px;
+          }
+          @include tablet{
+            width: 600px;
+            height: 200px;
+          }
+          @include mobile{
+            width: 500px;
+            height: 150px;
+          }
           .modal-text {
-            width: 680px;
+            width: 100%;
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -371,6 +649,16 @@ body {
             p {
               font-size: 32px;
               font-family: "Playfair Display", serif;
+              text-align: center;
+              @include desktop{
+                font-size: 24px;
+              }
+              @include tablet{
+                font-size: 21px;
+              }
+              @include mobile{
+                font-size: 16px;
+              }
             }
           }
 
@@ -380,6 +668,12 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+            @include tablet{
+              height: 80px;
+            }
+            @include mobile{
+              height: 60px;
+            }
             button {
               width: 110px;
               height: 58px;
@@ -388,6 +682,15 @@ body {
               background-color: #ff7675;
               font-family: "Playfair Display", serif;
               cursor: pointer;
+              @include tablet{
+                width: 80px;
+                height: 42px;
+              }
+              @include mobile{
+                width: 60px;
+                height: 32px;
+                font-size: 16px;
+              }
             }
           }
         }
@@ -399,6 +702,15 @@ body {
 //table
 #tableContainer{
   width: 1440px;
+  @include desktop{
+    width: 1024px;
+  }
+  @include tablet{
+    width: 768px;
+  }
+  @include mobile{
+    width: 480px;
+  }
   .page-table{
     width: 1302px;
     background-color: #fff;
@@ -417,6 +729,15 @@ body {
     }
     &::-webkit-scrollbar-thumb {
       background: #ff7675; 
+    }
+    @include desktop{
+      width: 950px;
+    }
+    @include tablet{
+      width: 650px;
+    }
+    @include mobile{
+      width: 450px;
     }
     .title-div{
       width: 50px;
@@ -449,6 +770,15 @@ body {
 #clockContainer{
   width: 1440px;
   margin-top: 50px;
+  @include desktop{
+    width: 1024px;
+  }
+  @include tablet{
+    width: 768px;
+  }
+  @include mobile{
+    width: 480px;
+  }
   .clock-table{
     width: 1302px;
     background-color: #fff;
@@ -468,8 +798,17 @@ body {
     &::-webkit-scrollbar-thumb {
       background: #ff7675; 
     }
+    @include desktop{
+      width: 950px;
+    }
+    @include tablet{
+      width: 650px;
+    }
+    @include mobile{
+      width: 450px;
+    }
     .clock-table-title{
-      width: 1302px;
+      width: 100%;
       height: 50px;
       color: #000;
       font-family: "Playfair Display", serif;
@@ -478,7 +817,7 @@ body {
       text-align: center;
     }
     .clock-cell-zone{
-      width: 1302px;
+      width: 100%;
       display: flex;
       flex-direction: row;
       .first-clock-column{

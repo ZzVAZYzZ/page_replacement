@@ -1,13 +1,10 @@
 @charset "UTF-8";
+/* Mixin */
 @font-face {
   font-family: "Playfair Display";
   font-weight: 300;
   src: url("../assets/fonts/playfairdisplay-variablefont_wght-webfont.woff2") format("woff2"), url("../assets/fonts/playfairdisplay-variablefont_wght-webfont.woff") format("woff");
 }
-embed {
-  cursor: pointer;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -16,19 +13,63 @@ embed {
 }
 
 body {
-  background-color: #dff9fb;
+  background-color: #ECF2FF;
 }
 body .contain {
   width: 1440px;
   margin: 0 auto;
   background-color: #fff;
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain {
+    width: 1024px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain {
+    width: 768px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain {
+    width: 480px;
+  }
+}
 body .contain div {
   width: 1440px;
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain div {
+    width: 1024px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain div {
+    width: 768px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain div {
+    width: 480px;
+  }
+}
 body .contain div nav {
   width: 1440px; /* Ensure this width is appropriate for your layout */
-  height: 275px;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain div nav {
+    width: 1024px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain div nav {
+    width: 768px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain div nav {
+    width: 480px;
+  }
 }
 body .contain div nav .nav-1 {
   width: 100%;
@@ -38,6 +79,21 @@ body .contain div nav .nav-1 {
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain div nav .nav-1 {
+    height: 110px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain div nav .nav-1 {
+    height: 100px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain div nav .nav-1 {
+    height: 80px;
+  }
+}
 body .contain div nav .nav-1 h1 {
   width: 100%;
   color: #fff;
@@ -45,11 +101,41 @@ body .contain div nav .nav-1 h1 {
   text-align: center;
   font-family: "Playfair Display", serif;
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain div nav .nav-1 h1 {
+    font-size: 38px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain div nav .nav-1 h1 {
+    font-size: 32px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain div nav .nav-1 h1 {
+    font-size: 28px;
+  }
+}
 body .contain div nav .nav-2 {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 145px;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain div nav .nav-2 {
+    height: 130px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain div nav .nav-2 {
+    height: 120px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain div nav .nav-2 {
+    height: 90px;
+  }
 }
 body .contain div nav .nav-2 div {
   width: 360px;
@@ -60,18 +146,58 @@ body .contain div nav .nav-2 div {
   border: 1px solid #000;
   cursor: pointer;
 }
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain div nav .nav-2 div {
+    height: 90px;
+  }
+}
 body .contain div nav .nav-2 div p {
   font-size: 50px;
   font-family: "Playfair Display", serif;
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain div nav .nav-2 div p {
+    font-size: 38px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain div nav .nav-2 div p {
+    font-size: 32px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain div nav .nav-2 div p {
+    font-size: 24px;
+  }
+}
 body .contain div div {
   width: 1440px;
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain div div {
+    width: 1024px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain div div {
+    width: 768px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain div div {
+    width: 480px;
+  }
+}
 body .contain div div .Frame-choice-wrapper {
-  width: 1440px;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   margin: 32px -14px;
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain div div .Frame-choice-wrapper {
+    margin: 24px -14px;
+  }
 }
 body .contain div div .Frame-choice-wrapper div {
   display: flex;
@@ -84,6 +210,11 @@ body .contain div div .Frame-choice-wrapper div div p {
   text-align: center;
   margin: 0 auto;
   font-family: "Playfair Display", serif;
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain div div .Frame-choice-wrapper div div p {
+    font-size: 24px;
+  }
 }
 body .contain div div .Frame-choice-wrapper div div ul {
   display: flex;
@@ -111,6 +242,21 @@ body .contain div div .reference {
   height: 60px;
   margin-bottom: 35px;
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain div div .reference {
+    width: 1024px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain div div .reference {
+    width: 768px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain div div .reference {
+    width: 480px;
+  }
+}
 body .contain div div .reference .reference-title {
   width: 262px;
   height: 60px;
@@ -121,8 +267,17 @@ body .contain div div .reference .reference-title p {
   line-height: 56px;
   text-align: center;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain div div .reference .reference-title p {
+    font-size: 26px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain div div .reference .reference-title p {
+    font-size: 20px;
+  }
+}
 body .contain div div .reference .reference-input {
-  width: 1164px;
   height: 56px;
   padding: 0 15px;
 }
@@ -134,15 +289,51 @@ body .contain div div .reference .reference-input input {
   border: none;
   border: 1px solid #000;
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain div div .reference .reference-input input {
+    width: 750px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain div div .reference .reference-input input {
+    width: 500px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain div div .reference .reference-input input {
+    width: 250px;
+  }
+}
 body .contain div div .run-button-wrapper {
   width: 1366px;
   display: flex;
   justify-content: end;
   margin-bottom: 35px;
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain div div .run-button-wrapper {
+    width: 950px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain div div .run-button-wrapper {
+    width: 700px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain div div .run-button-wrapper {
+    width: 450px;
+  }
+}
 body .contain div div .run-button-wrapper div {
   width: 110px;
   height: 56px;
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain div div .run-button-wrapper div {
+    width: 90px;
+    height: 46px;
+  }
 }
 body .contain div div .run-button-wrapper div button {
   width: 100%;
@@ -153,13 +344,49 @@ body .contain div div .run-button-wrapper div button {
   font-family: "Playfair Display", serif;
   cursor: pointer;
 }
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain div div .run-button-wrapper div button {
+    font-size: 24px;
+  }
+}
 body .contain .hr-start {
   width: 1300px;
   margin: 0 auto 64px auto;
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain .hr-start {
+    width: 950px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain .hr-start {
+    width: 650px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain .hr-start {
+    width: 450px;
+    margin: 0 auto 44px auto;
+  }
+}
 body .contain #tutor {
   width: 1300px;
   margin: 0 auto;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain #tutor {
+    width: 950px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain #tutor {
+    width: 650px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain #tutor {
+    width: 450px;
+  }
 }
 body .contain #tutor .tutor {
   width: 1164px;
@@ -167,6 +394,21 @@ body .contain #tutor .tutor {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain #tutor .tutor {
+    width: 748px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain #tutor .tutor {
+    width: 620px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain #tutor .tutor {
+    width: 430px;
+  }
 }
 body .contain #tutor .tutor div {
   width: 100%;
@@ -176,17 +418,52 @@ body .contain #tutor .tutor div h2 {
   font-size: 50px;
   font-family: "Playfair Display", serif;
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain #tutor .tutor div h2 {
+    font-size: 32px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain #tutor .tutor div h2 {
+    font-size: 26px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain #tutor .tutor div h2 {
+    font-size: 22px;
+  }
+}
 body .contain #tutor .tutor div {
   margin-top: 58px;
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain #tutor .tutor div {
+    margin-top: 28px;
+  }
 }
 body .contain #tutor .tutor div ul {
   display: flex;
   flex-direction: column;
-  gap: 58px;
+  gap: 38px;
 }
 body .contain #tutor .tutor div ul li p {
   font-size: 50px;
   font-family: "Playfair Display", serif;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain #tutor .tutor div ul li p {
+    font-size: 28px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain #tutor .tutor div ul li p {
+    font-size: 26px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain #tutor .tutor div ul li p {
+    font-size: 20px;
+  }
 }
 body .contain #pageFault {
   width: 1300px;
@@ -195,14 +472,62 @@ body .contain #pageFault {
   font-size: 32px;
   font-family: "Playfair Display", serif;
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain #pageFault {
+    width: 950px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain #pageFault {
+    width: 650px;
+    font-size: 26px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain #pageFault {
+    width: 450px;
+    font-size: 20px;
+  }
+}
 body .contain .hr-end {
   width: 1300px;
   margin: 64px auto;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain .hr-end {
+    width: 950px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain .hr-end {
+    width: 650px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain .hr-end {
+    width: 450px;
+    margin: 44px auto;
+  }
 }
 body .contain footer {
   width: 1440px;
   height: 250px;
   background-color: #2e2e2e;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain footer {
+    width: 1024px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain footer {
+    width: 768px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain footer {
+    width: 480px;
+  }
 }
 body .contain footer div {
   width: 794px;
@@ -211,6 +536,16 @@ body .contain footer div {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain footer div {
+    width: 720px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain footer div {
+    width: 430px;
+  }
 }
 body .contain footer div div {
   width: 100%;
@@ -225,6 +560,21 @@ body .contain footer div div h2 {
   font-size: 32px;
   font-family: "Playfair Display", serif;
   color: #fff;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain footer div div h2 {
+    font-size: 24px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain footer div div h2 {
+    font-size: 21px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain footer div div h2 {
+    font-size: 18px;
+  }
 }
 body .contain footer div div {
   width: 100%;
@@ -244,6 +594,12 @@ body .contain footer div div .icon-wrapper .facebook-icon .fb {
   width: 50px;
   height: 50px;
 }
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain footer div div .icon-wrapper .facebook-icon .fb {
+    width: 30px;
+    height: 30px;
+  }
+}
 body .contain footer div div .icon-wrapper div {
   margin-top: 10px;
 }
@@ -252,6 +608,21 @@ body .contain footer div div .icon-wrapper div p {
   font-family: "Playfair Display", serif;
   text-align: center;
   color: #fff;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain footer div div .icon-wrapper div p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain footer div div .icon-wrapper div p {
+    font-size: 21px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain footer div div .icon-wrapper div p {
+    font-size: 18px;
+  }
 }
 body .contain footer div div div {
   display: flex;
@@ -262,6 +633,12 @@ body .contain footer div div div .email-icon .email {
   width: 50px;
   height: 50px;
 }
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain footer div div div .email-icon .email {
+    width: 30px;
+    height: 30px;
+  }
+}
 body .contain footer div div div div {
   margin-top: 10px;
 }
@@ -270,6 +647,21 @@ body .contain footer div div div div p {
   font-family: "Playfair Display", serif;
   text-align: center;
   color: #fff;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain footer div div div div p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain footer div div div div p {
+    font-size: 21px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain footer div div div div p {
+    font-size: 18px;
+  }
 }
 body .contain footer div div div {
   display: flex;
@@ -280,6 +672,12 @@ body .contain footer div div div .github-icon .github {
   width: 50px;
   height: 50px;
 }
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain footer div div div .github-icon .github {
+    width: 30px;
+    height: 30px;
+  }
+}
 body .contain footer div div div div {
   margin-top: 10px;
 }
@@ -288,6 +686,21 @@ body .contain footer div div div div p {
   font-family: "Playfair Display", serif;
   text-align: center;
   color: #fff;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain footer div div div div p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain footer div div div div p {
+    font-size: 21px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain footer div div div div p {
+    font-size: 18px;
+  }
 }
 body .contain footer div div {
   width: 100%;
@@ -303,6 +716,21 @@ body .contain footer div div p {
   font-family: "Playfair Display", serif;
   color: #fff;
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain footer div div p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain footer div div p {
+    font-size: 21px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain footer div div p {
+    font-size: 12px;
+  }
+}
 body .contain .reference-validation-modal-wrapper {
   position: fixed;
   display: none;
@@ -312,6 +740,21 @@ body .contain .reference-validation-modal-wrapper {
   width: 1440px;
   height: 100vh;
   background-color: rgba(230, 217, 217, 0.6);
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain .reference-validation-modal-wrapper {
+    width: 1024px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain .reference-validation-modal-wrapper {
+    width: 768px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain .reference-validation-modal-wrapper {
+    width: 480px;
+  }
 }
 body .contain .reference-validation-modal-wrapper .reference-validation-modal {
   width: 100%;
@@ -331,8 +774,26 @@ body .contain .reference-validation-modal-wrapper .reference-validation-modal .m
   border: 1px solid #ff7675;
   margin: 0 auto;
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper {
+    width: 800px;
+    height: 400px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper {
+    width: 600px;
+    height: 200px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper {
+    width: 500px;
+    height: 150px;
+  }
+}
 body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper .modal-text {
-  width: 680px;
+  width: 100%;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -341,6 +802,22 @@ body .contain .reference-validation-modal-wrapper .reference-validation-modal .m
 body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper .modal-text p {
   font-size: 32px;
   font-family: "Playfair Display", serif;
+  text-align: center;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper .modal-text p {
+    font-size: 24px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper .modal-text p {
+    font-size: 21px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper .modal-text p {
+    font-size: 16px;
+  }
 }
 body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper .modal-button {
   width: 100%;
@@ -348,6 +825,16 @@ body .contain .reference-validation-modal-wrapper .reference-validation-modal .m
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper .modal-button {
+    height: 80px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper .modal-button {
+    height: 60px;
+  }
 }
 body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper .modal-button button {
   width: 110px;
@@ -358,9 +845,37 @@ body .contain .reference-validation-modal-wrapper .reference-validation-modal .m
   font-family: "Playfair Display", serif;
   cursor: pointer;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper .modal-button button {
+    width: 80px;
+    height: 42px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper .modal-button button {
+    width: 60px;
+    height: 32px;
+    font-size: 16px;
+  }
+}
 
 #tableContainer {
   width: 1440px;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  #tableContainer {
+    width: 1024px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #tableContainer {
+    width: 768px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  #tableContainer {
+    width: 480px;
+  }
 }
 #tableContainer .page-table {
   width: 1302px;
@@ -381,6 +896,21 @@ body .contain .reference-validation-modal-wrapper .reference-validation-modal .m
 }
 #tableContainer .page-table::-webkit-scrollbar-thumb {
   background: #ff7675;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  #tableContainer .page-table {
+    width: 950px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #tableContainer .page-table {
+    width: 650px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  #tableContainer .page-table {
+    width: 450px;
+  }
 }
 #tableContainer .page-table .title-div {
   width: 50px;
@@ -411,6 +941,21 @@ body .contain .reference-validation-modal-wrapper .reference-validation-modal .m
   width: 1440px;
   margin-top: 50px;
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+  #clockContainer {
+    width: 1024px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #clockContainer {
+    width: 768px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  #clockContainer {
+    width: 480px;
+  }
+}
 #clockContainer .clock-table {
   width: 1302px;
   background-color: #fff;
@@ -431,8 +976,23 @@ body .contain .reference-validation-modal-wrapper .reference-validation-modal .m
 #clockContainer .clock-table::-webkit-scrollbar-thumb {
   background: #ff7675;
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+  #clockContainer .clock-table {
+    width: 950px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #clockContainer .clock-table {
+    width: 650px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  #clockContainer .clock-table {
+    width: 450px;
+  }
+}
 #clockContainer .clock-table .clock-table-title {
-  width: 1302px;
+  width: 100%;
   height: 50px;
   color: #000;
   font-family: "Playfair Display", serif;
@@ -441,7 +1001,7 @@ body .contain .reference-validation-modal-wrapper .reference-validation-modal .m
   text-align: center;
 }
 #clockContainer .clock-table .clock-cell-zone {
-  width: 1302px;
+  width: 100%;
   display: flex;
   flex-direction: row;
 }
