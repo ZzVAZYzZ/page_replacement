@@ -35,6 +35,11 @@ body .contain {
     width: 480px;
   }
 }
+@media (max-width: 480px) {
+  body .contain {
+    width: 350px;
+  }
+}
 body .contain div {
   width: 1440px;
 }
@@ -53,6 +58,11 @@ body .contain div {
     width: 480px;
   }
 }
+@media (max-width: 480px) {
+  body .contain div {
+    width: 350px;
+  }
+}
 body .contain div nav {
   width: 1440px; /* Ensure this width is appropriate for your layout */
 }
@@ -69,6 +79,11 @@ body .contain div nav {
 @media (min-width: 480px) and (max-width: 768px) {
   body .contain div nav {
     width: 480px;
+  }
+}
+@media (max-width: 480px) {
+  body .contain div nav {
+    width: 350px;
   }
 }
 body .contain div nav .nav-1 {
@@ -94,6 +109,11 @@ body .contain div nav .nav-1 {
     height: 80px;
   }
 }
+@media (max-width: 480px) {
+  body .contain div nav .nav-1 {
+    height: 60px;
+  }
+}
 body .contain div nav .nav-1 h1 {
   width: 100%;
   color: #fff;
@@ -114,6 +134,11 @@ body .contain div nav .nav-1 h1 {
 @media (min-width: 480px) and (max-width: 768px) {
   body .contain div nav .nav-1 h1 {
     font-size: 28px;
+  }
+}
+@media (max-width: 480px) {
+  body .contain div nav .nav-1 h1 {
+    font-size: 22px;
   }
 }
 body .contain div nav .nav-2 {
@@ -137,6 +162,11 @@ body .contain div nav .nav-2 {
     height: 90px;
   }
 }
+@media (max-width: 480px) {
+  body .contain div nav .nav-2 {
+    height: 70px;
+  }
+}
 body .contain div nav .nav-2 div {
   width: 360px;
   height: 145px;
@@ -149,6 +179,11 @@ body .contain div nav .nav-2 div {
 @media (min-width: 480px) and (max-width: 768px) {
   body .contain div nav .nav-2 div {
     height: 90px;
+  }
+}
+@media (max-width: 480px) {
+  body .contain div nav .nav-2 div {
+    height: 70px;
   }
 }
 body .contain div nav .nav-2 div p {
@@ -170,6 +205,11 @@ body .contain div nav .nav-2 div p {
     font-size: 24px;
   }
 }
+@media (max-width: 480px) {
+  body .contain div nav .nav-2 div p {
+    font-size: 20px;
+  }
+}
 body .contain div div {
   width: 1440px;
 }
@@ -188,6 +228,11 @@ body .contain div div {
     width: 480px;
   }
 }
+@media (max-width: 480px) {
+  body .contain div div {
+    width: 350px;
+  }
+}
 body .contain div div .Frame-choice-wrapper {
   width: 100%;
   display: flex;
@@ -199,10 +244,20 @@ body .contain div div .Frame-choice-wrapper {
     margin: 24px -14px;
   }
 }
+@media (max-width: 480px) {
+  body .contain div div .Frame-choice-wrapper {
+    margin: 20px -14px;
+  }
+}
 body .contain div div .Frame-choice-wrapper div {
   display: flex;
   flex-direction: row;
   width: 420px;
+}
+@media (max-width: 480px) {
+  body .contain div div .Frame-choice-wrapper div {
+    width: 350px;
+  }
 }
 body .contain div div .Frame-choice-wrapper div div p {
   font-size: 32px;
@@ -216,6 +271,11 @@ body .contain div div .Frame-choice-wrapper div div p {
     font-size: 24px;
   }
 }
+@media (max-width: 480px) {
+  body .contain div div .Frame-choice-wrapper div div p {
+    font-size: 20px;
+  }
+}
 body .contain div div .Frame-choice-wrapper div div ul {
   display: flex;
   flex-direction: row;
@@ -223,6 +283,12 @@ body .contain div div .Frame-choice-wrapper div div ul {
   height: 100%;
   justify-content: space-around;
   gap: 12px;
+}
+@media (max-width: 480px) {
+  body .contain div div .Frame-choice-wrapper div div ul {
+    display: flex;
+    align-items: center;
+  }
 }
 body .contain div div .Frame-choice-wrapper div div ul li button {
   width: 49px;
@@ -234,6 +300,12 @@ body .contain div div .Frame-choice-wrapper div div ul li button {
 body .contain div div .Frame-choice-wrapper div div ul li button:hover {
   background-color: #ff7675;
   color: #fff;
+}
+@media (max-width: 480px) {
+  body .contain div div .Frame-choice-wrapper div div ul li button {
+    width: 30px;
+    font-size: 20px;
+  }
 }
 body .contain div div .reference {
   display: flex;
@@ -257,6 +329,11 @@ body .contain div div .reference {
     width: 480px;
   }
 }
+@media (max-width: 480px) {
+  body .contain div div .reference {
+    width: 350px;
+  }
+}
 body .contain div div .reference .reference-title {
   width: 262px;
   height: 60px;
@@ -275,6 +352,11 @@ body .contain div div .reference .reference-title p {
 @media (min-width: 480px) and (max-width: 768px) {
   body .contain div div .reference .reference-title p {
     font-size: 20px;
+  }
+}
+@media (max-width: 480px) {
+  body .contain div div .reference .reference-title p {
+    font-size: 18px;
   }
 }
 body .contain div div .reference .reference-input {
@@ -304,6 +386,11 @@ body .contain div div .reference .reference-input input {
     width: 250px;
   }
 }
+@media (max-width: 480px) {
+  body .contain div div .reference .reference-input input {
+    width: 150px;
+  }
+}
 body .contain div div .run-button-wrapper {
   width: 1366px;
   display: flex;
@@ -325,6 +412,11 @@ body .contain div div .run-button-wrapper {
     width: 450px;
   }
 }
+@media (max-width: 480px) {
+  body .contain div div .run-button-wrapper {
+    width: 300px;
+  }
+}
 body .contain div div .run-button-wrapper div {
   width: 110px;
   height: 56px;
@@ -333,6 +425,12 @@ body .contain div div .run-button-wrapper div {
   body .contain div div .run-button-wrapper div {
     width: 90px;
     height: 46px;
+  }
+}
+@media (max-width: 480px) {
+  body .contain div div .run-button-wrapper div {
+    width: 70px;
+    height: 36px;
   }
 }
 body .contain div div .run-button-wrapper div button {
@@ -347,6 +445,11 @@ body .contain div div .run-button-wrapper div button {
 @media (min-width: 480px) and (max-width: 768px) {
   body .contain div div .run-button-wrapper div button {
     font-size: 24px;
+  }
+}
+@media (max-width: 480px) {
+  body .contain div div .run-button-wrapper div button {
+    font-size: 20px;
   }
 }
 body .contain .hr-start {
@@ -369,6 +472,12 @@ body .contain .hr-start {
     margin: 0 auto 44px auto;
   }
 }
+@media (max-width: 480px) {
+  body .contain .hr-start {
+    width: 300px;
+    margin: 0 auto 40px auto;
+  }
+}
 body .contain #tutor {
   width: 1300px;
   margin: 0 auto;
@@ -386,6 +495,11 @@ body .contain #tutor {
 @media (min-width: 480px) and (max-width: 768px) {
   body .contain #tutor {
     width: 450px;
+  }
+}
+@media (max-width: 480px) {
+  body .contain #tutor {
+    width: 300px;
   }
 }
 body .contain #tutor .tutor {
@@ -408,6 +522,11 @@ body .contain #tutor .tutor {
 @media (min-width: 480px) and (max-width: 768px) {
   body .contain #tutor .tutor {
     width: 430px;
+  }
+}
+@media (max-width: 480px) {
+  body .contain #tutor .tutor {
+    width: 262px;
   }
 }
 body .contain #tutor .tutor div {
@@ -433,12 +552,22 @@ body .contain #tutor .tutor div h2 {
     font-size: 22px;
   }
 }
+@media (max-width: 480px) {
+  body .contain #tutor .tutor div h2 {
+    font-size: 20px;
+  }
+}
 body .contain #tutor .tutor div {
   margin-top: 58px;
 }
 @media (min-width: 480px) and (max-width: 768px) {
   body .contain #tutor .tutor div {
     margin-top: 28px;
+  }
+}
+@media (max-width: 480px) {
+  body .contain #tutor .tutor div {
+    margin-top: 22px;
   }
 }
 body .contain #tutor .tutor div ul {
@@ -465,6 +594,11 @@ body .contain #tutor .tutor div ul li p {
     font-size: 20px;
   }
 }
+@media (max-width: 480px) {
+  body .contain #tutor .tutor div ul li p {
+    font-size: 18px;
+  }
+}
 body .contain #pageFault {
   width: 1300px;
   height: 32px;
@@ -489,6 +623,12 @@ body .contain #pageFault {
     font-size: 20px;
   }
 }
+@media (max-width: 480px) {
+  body .contain #pageFault {
+    width: 300px;
+    font-size: 18px;
+  }
+}
 body .contain .hr-end {
   width: 1300px;
   margin: 64px auto;
@@ -507,6 +647,12 @@ body .contain .hr-end {
   body .contain .hr-end {
     width: 450px;
     margin: 44px auto;
+  }
+}
+@media (max-width: 480px) {
+  body .contain .hr-end {
+    width: 300px;
+    margin: 40px auto;
   }
 }
 body .contain footer {
@@ -529,6 +675,11 @@ body .contain footer {
     width: 480px;
   }
 }
+@media (max-width: 480px) {
+  body .contain footer {
+    width: 350px;
+  }
+}
 body .contain footer div {
   width: 794px;
   height: 100%;
@@ -545,6 +696,11 @@ body .contain footer div {
 @media (min-width: 480px) and (max-width: 768px) {
   body .contain footer div {
     width: 430px;
+  }
+}
+@media (max-width: 480px) {
+  body .contain footer div {
+    width: 320px;
   }
 }
 body .contain footer div div {
@@ -576,6 +732,11 @@ body .contain footer div div h2 {
     font-size: 18px;
   }
 }
+@media (max-width: 480px) {
+  body .contain footer div div h2 {
+    font-size: 16px;
+  }
+}
 body .contain footer div div {
   width: 100%;
   display: flex;
@@ -595,6 +756,12 @@ body .contain footer div div .icon-wrapper .facebook-icon .fb {
   height: 50px;
 }
 @media (min-width: 480px) and (max-width: 768px) {
+  body .contain footer div div .icon-wrapper .facebook-icon .fb {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (max-width: 480px) {
   body .contain footer div div .icon-wrapper .facebook-icon .fb {
     width: 30px;
     height: 30px;
@@ -624,6 +791,11 @@ body .contain footer div div .icon-wrapper div p {
     font-size: 18px;
   }
 }
+@media (max-width: 480px) {
+  body .contain footer div div .icon-wrapper div p {
+    font-size: 16px;
+  }
+}
 body .contain footer div div div {
   display: flex;
   flex-direction: column;
@@ -634,6 +806,12 @@ body .contain footer div div div .email-icon .email {
   height: 50px;
 }
 @media (min-width: 480px) and (max-width: 768px) {
+  body .contain footer div div div .email-icon .email {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (max-width: 480px) {
   body .contain footer div div div .email-icon .email {
     width: 30px;
     height: 30px;
@@ -663,6 +841,11 @@ body .contain footer div div div div p {
     font-size: 18px;
   }
 }
+@media (max-width: 480px) {
+  body .contain footer div div div div p {
+    font-size: 16px;
+  }
+}
 body .contain footer div div div {
   display: flex;
   flex-direction: column;
@@ -673,6 +856,12 @@ body .contain footer div div div .github-icon .github {
   height: 50px;
 }
 @media (min-width: 480px) and (max-width: 768px) {
+  body .contain footer div div div .github-icon .github {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (max-width: 480px) {
   body .contain footer div div div .github-icon .github {
     width: 30px;
     height: 30px;
@@ -700,6 +889,11 @@ body .contain footer div div div div p {
 @media (min-width: 480px) and (max-width: 768px) {
   body .contain footer div div div div p {
     font-size: 18px;
+  }
+}
+@media (max-width: 480px) {
+  body .contain footer div div div div p {
+    font-size: 16px;
   }
 }
 body .contain footer div div {
@@ -731,6 +925,11 @@ body .contain footer div div p {
     font-size: 12px;
   }
 }
+@media (max-width: 480px) {
+  body .contain footer div div p {
+    font-size: 12px;
+  }
+}
 body .contain .reference-validation-modal-wrapper {
   position: fixed;
   display: none;
@@ -754,6 +953,11 @@ body .contain .reference-validation-modal-wrapper {
 @media (min-width: 480px) and (max-width: 768px) {
   body .contain .reference-validation-modal-wrapper {
     width: 480px;
+  }
+}
+@media (max-width: 480px) {
+  body .contain .reference-validation-modal-wrapper {
+    width: 350px;
   }
 }
 body .contain .reference-validation-modal-wrapper .reference-validation-modal {
@@ -792,6 +996,12 @@ body .contain .reference-validation-modal-wrapper .reference-validation-modal .m
     height: 150px;
   }
 }
+@media (max-width: 480px) {
+  body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper {
+    width: 400px;
+    height: 150px;
+  }
+}
 body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper .modal-text {
   width: 100%;
   flex: 1;
@@ -819,6 +1029,11 @@ body .contain .reference-validation-modal-wrapper .reference-validation-modal .m
     font-size: 16px;
   }
 }
+@media (max-width: 480px) {
+  body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper .modal-text p {
+    font-size: 16px;
+  }
+}
 body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper .modal-button {
   width: 100%;
   height: 258px;
@@ -832,6 +1047,11 @@ body .contain .reference-validation-modal-wrapper .reference-validation-modal .m
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
+  body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper .modal-button {
+    height: 60px;
+  }
+}
+@media (max-width: 480px) {
   body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper .modal-button {
     height: 60px;
   }
@@ -858,6 +1078,13 @@ body .contain .reference-validation-modal-wrapper .reference-validation-modal .m
     font-size: 16px;
   }
 }
+@media (max-width: 480px) {
+  body .contain .reference-validation-modal-wrapper .reference-validation-modal .modal-wrapper .modal-button button {
+    width: 60px;
+    height: 32px;
+    font-size: 16px;
+  }
+}
 
 #tableContainer {
   width: 1440px;
@@ -875,6 +1102,11 @@ body .contain .reference-validation-modal-wrapper .reference-validation-modal .m
 @media (min-width: 480px) and (max-width: 768px) {
   #tableContainer {
     width: 480px;
+  }
+}
+@media (max-width: 480px) {
+  #tableContainer {
+    width: 350px;
   }
 }
 #tableContainer .page-table {
@@ -910,6 +1142,11 @@ body .contain .reference-validation-modal-wrapper .reference-validation-modal .m
 @media (min-width: 480px) and (max-width: 768px) {
   #tableContainer .page-table {
     width: 450px;
+  }
+}
+@media (max-width: 480px) {
+  #tableContainer .page-table {
+    width: 300px;
   }
 }
 #tableContainer .page-table .title-div {
@@ -956,6 +1193,11 @@ body .contain .reference-validation-modal-wrapper .reference-validation-modal .m
     width: 480px;
   }
 }
+@media (max-width: 480px) {
+  #clockContainer {
+    width: 350px;
+  }
+}
 #clockContainer .clock-table {
   width: 1302px;
   background-color: #fff;
@@ -989,6 +1231,11 @@ body .contain .reference-validation-modal-wrapper .reference-validation-modal .m
 @media (min-width: 480px) and (max-width: 768px) {
   #clockContainer .clock-table {
     width: 450px;
+  }
+}
+@media (max-width: 480px) {
+  #clockContainer .clock-table {
+    width: 300px;
   }
 }
 #clockContainer .clock-table .clock-table-title {

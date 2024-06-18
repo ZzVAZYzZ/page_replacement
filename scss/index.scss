@@ -29,6 +29,9 @@ body {
     @include mobile{
       width: 480px;
     }
+    @include mobile_mini{
+      width: 350px;
+    }
     div {
       width: 1440px;
       @include desktop{
@@ -39,6 +42,9 @@ body {
       }
       @include mobile{
         width: 480px;
+      }
+      @include mobile_mini{
+        width: 350px;
       }
       // navbar
       nav {
@@ -52,6 +58,9 @@ body {
         }
         @include mobile{
           width: 480px;
+        }
+        @include mobile_mini{
+          width: 350px;
         }
         .nav-1 {
           width: 100%;
@@ -69,6 +78,9 @@ body {
           @include mobile{
             height: 80px;
           }
+          @include mobile_mini{
+            height: 60px;
+          }
           h1 {
             width: 100%;
             color: #fff;
@@ -83,6 +95,9 @@ body {
             }
             @include mobile{
               font-size: 28px;
+            }
+            @include mobile_mini{
+              font-size: 22px;
             }
           }
         }
@@ -101,6 +116,9 @@ body {
           @include mobile{
             height: 90px;
           }
+          @include mobile_mini{
+            height: 70px;
+          }
 
           div {
             width: 360px;
@@ -113,6 +131,9 @@ body {
             @include mobile{
               height: 90px;
             }
+            @include mobile_mini{
+              height: 70px;
+            }
             p {
               font-size: 50px;
               font-family: "Playfair Display", serif;
@@ -124,6 +145,9 @@ body {
               }
               @include mobile{
                 font-size: 24px;
+              }
+              @include mobile_mini{
+                font-size: 20px;
               }
             }
           }
@@ -141,6 +165,9 @@ body {
         @include mobile{
           width: 480px;
         }
+        @include mobile_mini{
+          width: 350px;
+        }
         //frame choice
         .Frame-choice-wrapper {
           width: 100%;
@@ -150,10 +177,16 @@ body {
           @include mobile{
             margin: 24px -14px;
           }
+          @include mobile_mini{
+            margin: 20px -14px;
+          }
           div {
             display: flex;
             flex-direction: row;
             width: 420px;
+            @include mobile_mini{
+              width: 350px;
+            }
             div {
               p {
                 font-size: 32px;
@@ -163,6 +196,9 @@ body {
                 font-family: "Playfair Display", serif;
                 @include mobile{
                   font-size: 24px;
+                }
+                @include mobile_mini{
+                  font-size: 20px;
                 }
               }
             }
@@ -174,6 +210,10 @@ body {
                 height: 100%;
                 justify-content: space-around;
                 gap: 12px;
+                @include mobile_mini{
+                  display: flex;
+                  align-items: center;
+                }
                 li {
                   button {
                     width: 49px;
@@ -184,6 +224,10 @@ body {
                     &:hover {
                       background-color: #ff7675;
                       color: #fff;
+                    }
+                    @include mobile_mini{
+                      width: 30px;
+                      font-size: 20px;
                     }
                   }
                 }
@@ -206,6 +250,9 @@ body {
           @include mobile{
             width: 480px;
           }
+          @include mobile_mini{
+            width: 350px;
+          }
           margin-bottom: 35px;
           .reference-title {
             width: 262px;
@@ -220,6 +267,9 @@ body {
               }
               @include mobile{
                 font-size: 20px;
+              }
+              @include mobile_mini{
+                font-size: 18px;
               }
             }
           }
@@ -243,6 +293,9 @@ body {
               @include mobile{
                 width: 250px;
               }
+              @include mobile_mini{
+                width: 150px;
+              }
             }
           }
         }
@@ -261,12 +314,19 @@ body {
           @include mobile{
             width: 450px;
           }
+          @include mobile_mini{
+            width: 300px;
+          }
           div {
             width: 110px;
             height: 56px;
             @include mobile{
               width: 90px;
               height: 46px;
+            }
+            @include mobile_mini{
+              width: 70px;
+              height: 36px;
             }
             button {
               width: 100%;
@@ -278,6 +338,9 @@ body {
               cursor: pointer;
               @include mobile{
                 font-size: 24px;
+              }
+              @include mobile_mini{
+                font-size: 20px;
               }
             }
           }
@@ -298,6 +361,10 @@ body {
         width: 450px;
         margin: 0 auto 44px auto;
       }
+      @include mobile_mini{
+        width: 300px;
+        margin: 0 auto 40px auto;
+      }
     }
     #tutor {
       width: 1300px;
@@ -310,6 +377,9 @@ body {
       }
       @include mobile{
         width: 450px;
+      }
+      @include mobile_mini{
+        width: 300px;
       }
       .tutor {
         width: 1164px;
@@ -326,6 +396,9 @@ body {
         @include mobile{
           width: 430px;
         }
+        @include mobile_mini{
+          width: 262px;
+        }
         div {
           width: 100%;
           h2 {
@@ -341,12 +414,18 @@ body {
             @include mobile{
               font-size: 22px;
             }
+            @include mobile_mini{
+              font-size: 20px;
+            }
           }
         }
         div {
           margin-top: 58px;
           @include mobile{
             margin-top: 28px;
+          }
+          @include mobile_mini{
+            margin-top: 22px;
           }
           ul {
             display: flex;
@@ -364,6 +443,9 @@ body {
                 }
                 @include mobile{
                   font-size: 20px;
+                }
+                @include mobile_mini{
+                  font-size: 18px;
                 }
               }
             }
@@ -389,6 +471,10 @@ body {
         width: 450px;
         font-size: 20px;
       }
+      @include mobile_mini{
+        width: 300px;
+        font-size: 18px;
+      }
     }
 
     .hr-end {
@@ -404,6 +490,10 @@ body {
       @include mobile{
         width: 450px;
         margin: 44px auto;
+      }
+      @include mobile_mini{
+        width: 300px;
+        margin: 40px auto;
       }
     }
     
@@ -421,6 +511,9 @@ body {
       @include mobile{
         width: 480px;
       }
+      @include mobile_mini{
+        width: 350px;
+      }
       div {
         width: 794px;
         height: 100%;
@@ -433,6 +526,9 @@ body {
         }
         @include mobile{
           width: 430px;
+        }
+        @include mobile_mini{
+          width: 320px;
         }
         div {
           width: 100%;
@@ -454,6 +550,9 @@ body {
             }
             @include mobile{
               font-size: 18px;
+            }
+            @include mobile_mini{
+              font-size: 16px;
             }
           }
         }
@@ -477,6 +576,10 @@ body {
                   width: 30px;
                   height: 30px;
                 }
+                @include mobile_mini{
+                  width: 30px;
+                  height: 30px;
+                }
               }
             }
             div {
@@ -495,6 +598,9 @@ body {
                 @include mobile{
                   font-size: 18px;
                 }
+                @include mobile_mini{
+                  font-size: 16px;
+                }
               }
             }
           }
@@ -507,6 +613,10 @@ body {
                 width: 50px;
                 height: 50px;
                 @include mobile{
+                  width: 30px;
+                  height: 30px;
+                }
+                @include mobile_mini{
                   width: 30px;
                   height: 30px;
                 }
@@ -527,6 +637,9 @@ body {
                 }
                 @include mobile{
                   font-size: 18px;
+                }
+                @include mobile_mini{
+                  font-size: 16px;
                 }
               }
             }
@@ -543,6 +656,10 @@ body {
                   width: 30px;
                   height: 30px;
                 }
+                @include mobile_mini{
+                  width: 30px;
+                  height: 30px;
+                }
               }
             }
             div {
@@ -560,6 +677,9 @@ body {
                 }
                 @include mobile{
                   font-size: 18px;
+                }
+                @include mobile_mini{
+                  font-size: 16px;
                 }
               }
             }
@@ -586,6 +706,9 @@ body {
             @include mobile{
               font-size: 12px;
             }
+            @include mobile_mini{
+              font-size: 12px;
+            }
           }
         }
       }
@@ -610,6 +733,9 @@ body {
       }
       @include mobile{
         width: 480px;
+      }
+      @include mobile_mini{
+        width: 350px;
       }
       .reference-validation-modal {
         width: 100%;
@@ -640,6 +766,10 @@ body {
             width: 500px;
             height: 150px;
           }
+          @include mobile_mini{
+            width: 400px;
+            height: 150px;
+          }
           .modal-text {
             width: 100%;
             flex: 1;
@@ -659,6 +789,9 @@ body {
               @include mobile{
                 font-size: 16px;
               }
+              @include mobile_mini{
+                font-size: 16px;
+              }
             }
           }
 
@@ -674,6 +807,9 @@ body {
             @include mobile{
               height: 60px;
             }
+            @include mobile_mini{
+              height: 60px;
+            }
             button {
               width: 110px;
               height: 58px;
@@ -687,6 +823,11 @@ body {
                 height: 42px;
               }
               @include mobile{
+                width: 60px;
+                height: 32px;
+                font-size: 16px;
+              }
+              @include mobile_mini{
                 width: 60px;
                 height: 32px;
                 font-size: 16px;
@@ -710,6 +851,9 @@ body {
   }
   @include mobile{
     width: 480px;
+  }
+  @include mobile_mini{
+    width: 350px;
   }
   .page-table{
     width: 1302px;
@@ -738,6 +882,9 @@ body {
     }
     @include mobile{
       width: 450px;
+    }
+    @include mobile_mini{
+      width: 300px;
     }
     .title-div{
       width: 50px;
@@ -779,6 +926,9 @@ body {
   @include mobile{
     width: 480px;
   }
+  @include mobile_mini{
+    width: 350px;
+  }
   .clock-table{
     width: 1302px;
     background-color: #fff;
@@ -806,6 +956,9 @@ body {
     }
     @include mobile{
       width: 450px;
+    }
+    @include mobile_mini{
+      width: 300px;
     }
     .clock-table-title{
       width: 100%;
