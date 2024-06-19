@@ -296,6 +296,7 @@ body .contain div div .Frame-choice-wrapper div div ul li button {
   background-color: #fff;
   cursor: pointer;
   font-size: 32px;
+  border: 1px solid #000;
 }
 body .contain div div .Frame-choice-wrapper div div ul li button:hover {
   background-color: #ff7675;

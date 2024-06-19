@@ -3,7 +3,6 @@ import LRUPageReplacement from '../classes/LRUPageReplacement.js';
 import OPTIMALPageReplacement from '../classes/OPTIMALPageReplacement.js';
 import CLOCKPageReplacement from '../classes/CLOCKPageReplacement.js';
 import { resetPageIndexCount } from '../components/pageFramesGenerator.js';
-import { firstClockRender } from '../components/clockFramesGenerator.js';
 
 export const runFIFO = (frameChoice,inputValue) => {
     const pages = inputValue;
