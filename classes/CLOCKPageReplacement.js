@@ -5,9 +5,9 @@ export default class CLOCKPageReplacement {
     constructor(frameSize) {
         this.frameSize = frameSize;
         this.frames = [];
-        this.clockFrames = []; // Mảng để lưu trạng thái các khung trang trong Clock
+        this.clockFrames = [];
         this.pageFaults = 0;
-        this.pointer = 0; // Con trỏ để theo dõi vị trí hiện tại trong vòng tròn
+        this.pointer = 0; 
         this.pinkyCounter = 1;
     }
 

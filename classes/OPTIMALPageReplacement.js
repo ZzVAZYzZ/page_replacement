@@ -26,7 +26,7 @@ export default class OPTIMALPageReplacement {
                 this.countOfPageIndex++;
             } else {
                 // Replace the least recently used page (OPTIMAL logic in function findLRUPage)
-                const lruPageIndex = this.findLRUPage();
+                const lruPageIndex = this.findOptimalPage();
                 this.frames.splice(lruPageIndex, 1, {
                     page: page,
                     countOfPageIndex: this.countOfPageIndex,
@@ -46,7 +46,7 @@ export default class OPTIMALPageReplacement {
         resetReferenceCount();
     }
     
-    findLRUPage() {
+    findOptimalPage() {
         let oldestPageIndex = 0;
         let oldestPageCount = this.frames[0].countOfPageIndex;
         //swap oldest CountOfPageIndex
