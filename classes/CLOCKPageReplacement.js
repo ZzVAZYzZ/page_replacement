@@ -13,7 +13,6 @@ export default class CLOCKPageReplacement {
 
     accessPage(page) {
         const pageIndex = this.frames.findIndex(item => item.page === page);
-        console.log(pageIndex);
         //reset frames pinky
         this.resetPinky();
         if (pageIndex === -1) {

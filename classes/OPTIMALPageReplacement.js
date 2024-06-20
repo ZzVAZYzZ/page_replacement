@@ -25,7 +25,7 @@ export default class OPTIMALPageReplacement {
                 });
                 this.countOfPageIndex++;
             } else {
-                // Replace the least recently used page (OPTIMAL logic in function findLRUPage)
+                // Replace the least recently used page (OPTIMAL logic in function findOPTIMALPage)
                 const optimalPageIndex = this.findOptimalPage();
                 this.frames.splice(optimalPageIndex, 1, {
                     page: page,
