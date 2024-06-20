@@ -203,6 +203,11 @@ body {
               }
             }
             div {
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              height: 50px;
+              margin-bottom: 50px;
               ul {
                 display: flex;
                 flex-direction: row;
@@ -233,8 +238,29 @@ body {
                   }
                 }
               }
+              div{
+                width: 100%;
+                height: 100%;
+                margin-top: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                gap: 15px;
+                .custom-frame{
+                  width: 50%;
+                  font-size: 32px;
+                  text-align: center;
+                }
+                #customFrame{
+                  width: 50px;
+                  height: 50px;
+                  font-size: 32px;
+                }
+              }
+              
             }
           }
+          
         }
         //input reference
         .reference {

@@ -276,6 +276,13 @@ body .contain div div .Frame-choice-wrapper div div p {
     font-size: 20px;
   }
 }
+body .contain div div .Frame-choice-wrapper div div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 50px;
+}
 body .contain div div .Frame-choice-wrapper div div ul {
   display: flex;
   flex-direction: row;
@@ -307,6 +314,25 @@ body .contain div div .Frame-choice-wrapper div div ul li button:hover {
     width: 30px;
     font-size: 20px;
   }
+}
+body .contain div div .Frame-choice-wrapper div div div {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 15px;
+}
+body .contain div div .Frame-choice-wrapper div div div .custom-frame {
+  width: 50%;
+  font-size: 32px;
+  text-align: center;
+}
+body .contain div div .Frame-choice-wrapper div div div #customFrame {
+  width: 50px;
+  height: 50px;
+  font-size: 32px;
 }
 body .contain div div .reference {
   display: flex;

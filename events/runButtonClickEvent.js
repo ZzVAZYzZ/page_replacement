@@ -17,7 +17,7 @@ runButton.addEventListener('click', ()=>{
     const numbers = inputValue.split(' ').filter(Boolean);
     //covert string to number
     const parsedNumbers = numbers.map(Number);
-
+    console.log(getFrameChoice);
 
     if(checkDigits){
         firstTitleColumn(getFrameChoice());

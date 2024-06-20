@@ -56,6 +56,13 @@ export const resetBgTextColor = (DOM,method) => {
                 changeBgTextColor(frameChoice.frameThree,colorHex.white,colorHex.black);
                 changeBgTextColor(frameChoice.frameFour,colorHex.white,colorHex.black);
                 break;
+            case document.getElementById('customFrame'):
+                changeBgTextColor(frameChoice.frameOne,colorHex.white,colorHex.black);
+                changeBgTextColor(frameChoice.frameTwo,colorHex.white,colorHex.black);
+                changeBgTextColor(frameChoice.frameThree,colorHex.white,colorHex.black);
+                changeBgTextColor(frameChoice.frameFour,colorHex.white,colorHex.black);
+                changeBgTextColor(frameChoice.frameFive,colorHex.white,colorHex.black);
+                break;
             default:
                 break;
         }

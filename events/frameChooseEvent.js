@@ -6,6 +6,23 @@ import { colorHex } from "../utils/colorHex.js";
 
 let _frameChoice = 4;
 
+
+//Custom Frame
+
+const customFrame = document.getElementById('customFrame');
+customFrame.addEventListener('change', ()=> {
+    _frameChoice = customFrame.value;
+})
+
+
+customFrame.addEventListener('focus',()=>{
+    customFrame.style.backgroundColor = '#ff7675';
+    customFrame.style.color = '#fff'
+    resetBgTextColor(customFrame,1);
+})
+
+
+
 const setFrameChoice = (value) => {
     _frameChoice = value;
 };
