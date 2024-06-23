@@ -51,7 +51,7 @@ runButton.addEventListener("click", () => {
             break;
           case 3:
             document.getElementById("clockContainer").style.display = "none";
-            runOPTIMAL(getFrameChoice(), parsedNumbers);
+            runOPTIMAL(getFrameChoice(), parsedNumbers, numberArray);
             break;
           case 4:
             firstClockRender(getFrameChoice());
@@ -84,7 +84,7 @@ runButton.addEventListener("click", () => {
             break;
           case 3:
             document.getElementById("clockContainer").style.display = "none";
-            runOPTIMAL(getFrameChoice(), parsedNumbers);
+            runOPTIMAL(getFrameChoice(), parsedNumbers, numberArray);
             break;
           case 4:
             firstClockRender(getFrameChoice());

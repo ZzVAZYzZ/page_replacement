@@ -29,7 +29,7 @@ export const runLRU = (frameChoice,inputValue,numberArray) => {
     const pages = inputValue;
     numberArrayi = numberArray;
     const lru = new LRUPageReplacement(frameChoice);
-    pages.forEach(page => lru.accessPageOptimal(page));
+    pages.forEach(page => lru.accessPage(page));
     resetPageIndexCount();
     const totalPageFaults = lru.getPageFaults();
     document.getElementById('pageFault').innerHTML=`Total Page Fault: ${totalPageFaults}`;
@@ -38,11 +38,13 @@ export const runLRU = (frameChoice,inputValue,numberArray) => {
 export const runOPTIMAL = (frameChoice,inputValue,numberArray) => {
     const pages = inputValue;
     numberArrayi = numberArray;
+    console.clear();
     const optimal = new OPTIMALPageReplacement(frameChoice);
-    pages.forEach(page => optimal.accessPage(page));
+    pages.forEach(page => optimal.accessPageOPTIMAL(page));
     resetPageIndexCount();
     const totalPageFaults = optimal.getPageFaults();
     document.getElementById('pageFault').innerHTML=`Total Page Fault: ${totalPageFaults}`;
+    
 }
 
 export const runCLOCK = (frameChoice,inputValue) => {

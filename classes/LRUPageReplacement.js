@@ -13,6 +13,7 @@ export default class LRUPageReplacement {
 
     accessPage(page) {
         const pageExists = this.frames.some(item => item.page === page);
+        
         //reset pinky
         this.resetPinky()
         if (!pageExists) {
@@ -48,7 +49,7 @@ export default class LRUPageReplacement {
         resetReferenceCount();
     }
     
-    accessPageOptimal(page){
+     accessPageOptimal(page){
         //
         const pageExists = this.frames.some(item => item.page === page);
         this.numberArray = getNumberArrayI();
@@ -78,9 +79,8 @@ export default class LRUPageReplacement {
         } else {
             //Case already exist in frame
             const pageIndex = this.frames.findIndex(item => item.page === page);
-            
+            console.log(this.frames[pageIndex].page,',count = ',this.frames[pageIndex].countOfPageIndex);
             this.updateIndex(this.numberArray,this.countOfPageIndex,page);
-            
             this.frames[pageIndex].countOfPageIndex = this.newIndex;
             
             this.countOfPageIndex++;
@@ -110,7 +110,7 @@ export default class LRUPageReplacement {
         let oldestPageCount = this.frames[0].countOfPageIndex;
         //swap oldest CountOfPageIndex
         this.frames.forEach((item, index) => {
-            if (item.countOfPageIndex > oldestPageCount) {
+            if (item.countOfPageIndex < oldestPageCount) {
                 oldestPageIndex = index;
                 oldestPageCount = item.countOfPageIndex;
             }
