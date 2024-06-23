@@ -54,7 +54,7 @@ export const runCLOCK = (frameChoice,inputValue) => {
     pages.forEach(page => clock.accessPage(page));
     // firstClockRender(frameChoice);
     resetPageIndexCount();
-    const totalPageFaults = optimal.getPageFaults();
+    const totalPageFaults = clock.getPageFaults();
     document.getElementById('pageFault').innerHTML=`Total Page Fault: ${totalPageFaults}`;
 }
 

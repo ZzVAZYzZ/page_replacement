@@ -1,5 +1,4 @@
 import { addOnColumn,resetReferenceCount } from "../components/pageFramesGenerator.js";
-import { getNumberArrayI } from "../jobs/runJob.js";
 export default class LRUPageReplacement {
     constructor(frameSize, resultElement) {
         this.frameSize = frameSize;
@@ -48,62 +47,6 @@ export default class LRUPageReplacement {
         this.updateResult(page);
         resetReferenceCount();
     }
-    
-     accessPageOptimal(page){
-        //
-        const pageExists = this.frames.some(item => item.page === page);
-        this.numberArray = getNumberArrayI();
-        //reset pinky
-        this.resetPinky();
-        if (!pageExists) {
-            // Page fault
-            this.pageFaults++;
-            if (this.frames.length < this.frameSize) {
-                // Add the new page if there is space
-                this.frames.push({
-                    page: page,
-                    countOfPageIndex: this.countOfPageIndex,
-                    pinky: true
-                });
-                this.countOfPageIndex++;
-            } else {
-                //Case > framesize 
-                const lruPageIndex = this.findLRUPage();
-                this.frames.splice(lruPageIndex, 1, {
-                    page: page,
-                    countOfPageIndex: this.countOfPageIndex,
-                    pinky: true
-                });
-                this.countOfPageIndex++;
-            }
-        } else {
-            //Case already exist in frame
-            const pageIndex = this.frames.findIndex(item => item.page === page);
-            console.log(this.frames[pageIndex].page,',count = ',this.frames[pageIndex].countOfPageIndex);
-            this.updateIndex(this.numberArray,this.countOfPageIndex,page);
-            this.frames[pageIndex].countOfPageIndex = this.newIndex;
-            
-            this.countOfPageIndex++;
-
-        }
-    
-        // Update result in DOM
-        this.updateResult(page);
-        resetReferenceCount();
-    }
-
-    updateIndex(array,pageIndex,page){
-
-        for (let index = 0; index < array.length; index++) {
-            if(page == array[index] && index > pageIndex+1){
-                this.newIndex = index+1;
-                console.log(`${page}-index = `,this.newIndex);
-            }
-        }
-        
-    }
-
-
 
     findLRUPage() {
         let oldestPageIndex = 0;
