@@ -22,7 +22,7 @@ let numberArray ;
  
 runButton.addEventListener("click", () => {
   const inputValue = document.getElementById("referenceDetail").value.trim();
-  const checkDigits = isOnlyDigits(inputValue);
+  let checkDigits = isOnlyDigits(inputValue);
   //split to array but still string
   const numbers = inputValue.split(" ").filter(Boolean);
   //covert string to number
@@ -94,7 +94,7 @@ runButton.addEventListener("click", () => {
             break;
         }
       } else {
-        checkDigits = false;
+        
         alert("Please enter only number in custom frame");
         document.getElementById("referenceDetail").value = "";
         document.getElementById("tutor").innerHTML = tutor.howToUseThisWebSite;
