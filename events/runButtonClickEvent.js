@@ -70,7 +70,7 @@ runButton.addEventListener("click", () => {
       }
       break;
     case 'customChoice':
-      if (customCheckDigits) {
+      if (customCheckDigits&&checkDigits) {
         firstTitleColumn(getFrameChoice());
         document.getElementById("tutor").innerHTML = "";
         switch (getAlgorithm()) {
@@ -95,7 +95,7 @@ runButton.addEventListener("click", () => {
         }
       } else {
         
-        alert("Please enter only number in custom frame");
+        validationModal.style.display = "block";
         document.getElementById("referenceDetail").value = "";
         document.getElementById("tutor").innerHTML = tutor.howToUseThisWebSite;
         document.getElementById("tableContainer").style.display = "none";
