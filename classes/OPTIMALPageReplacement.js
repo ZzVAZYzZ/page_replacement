@@ -37,23 +37,30 @@ export default class OPTIMALPageReplacement {
                 const predictedIndex = this.predictIndex(this.numberArray,page);
                 console.log(`page: ${page}, index:${this.count-1}, predictedIndex: ${predictedIndex}`);
                 
-                if(this.checkInfinityArray()){
-                    this.frames.splice(this.frameSize-1, 1, {
-                        page: page,
-                        countOfPageIndex: predictedIndex,
-                        pinky: true,
-                    });
-                    this.countOfPageIndex++;
-                }else{
-                    // Replace the least recently used page (OPTIMAL logic in function findOPTIMALPage)
-                    const optimalPageIndex = this.findOptimalPage();
+                // if(this.checkInfinityArray()){
+                //     this.frames.splice(this.frameSize-1, 1, {
+                //         page: page,
+                //         countOfPageIndex: predictedIndex,
+                //         pinky: true,
+                //     });
+                //     this.countOfPageIndex++;
+                // }else{
+                //     // Replace (OPTIMAL logic in function findOPTIMALPage)
+                //     const optimalPageIndex = this.findOptimalPage();
+                //     this.frames.splice(optimalPageIndex, 1, {
+                //         page: page,
+                //         countOfPageIndex: predictedIndex,
+                //         pinky: true,
+                //     });
+                //     this.countOfPageIndex++;
+                // }
+                const optimalPageIndex = this.findOptimalPage();
                     this.frames.splice(optimalPageIndex, 1, {
                         page: page,
                         countOfPageIndex: predictedIndex,
                         pinky: true,
                     });
                     this.countOfPageIndex++;
-                }
                 
             }
         } else {
