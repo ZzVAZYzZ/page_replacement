@@ -38,7 +38,10 @@ export default class OPTIMALPageReplacement {
                 console.log(`page: ${page}, index:${this.count-1}, predictedIndex: ${predictedIndex}`);
                 
                 // if(this.checkInfinityArray()){
-                //     this.frames.splice(this.frameSize-1, 1, {
+                //     this.findLastInfinityIndex()
+                //     const lastInfinityIndex = this.findLastInfinityIndex()
+                //     console.log(lastInfinityIndex);
+                //     this.frames.splice(lastInfinityIndex, 1, {
                 //         page: page,
                 //         countOfPageIndex: predictedIndex,
                 //         pinky: true,
@@ -81,6 +84,18 @@ export default class OPTIMALPageReplacement {
     //page = 1
     //predictIndex(numberArray,page) = 8;
 
+    findLastInfinityIndex(){
+        
+        for (let index = this.frameSize; index > 0; index--) {
+            // console.log(this.frames[index-1]);
+            if(this.frames[index-1].countOfPageIndex>=100000000){
+                // console.log(index);
+                return index-1;
+            }
+            
+        }
+    }
+
     predictIndex(numberArray,page){
         for (let index = this.count; index < numberArray.length; index++) {
             if (numberArray[index]==page) {
@@ -97,13 +112,13 @@ export default class OPTIMALPageReplacement {
     checkInfinityArray(){
         let count = 0
         for (let index = 0; index < this.frames.length; index++) {
-            console.log(this.frames[index].countOfPageIndex);
+            // console.log(this.frames[index].countOfPageIndex);
             if(this.frames[index].countOfPageIndex > 100000){
                 count++;   
             }
             
         }
-        console.log(count);
+        // console.log(count);
         if (count >=2) {
             return true
         }
