@@ -37,33 +37,32 @@ export default class OPTIMALPageReplacement {
                 const predictedIndex = this.predictIndex(this.numberArray,page);
                 console.log(`page: ${page}, index:${this.count-1}, predictedIndex: ${predictedIndex}`);
                 
-                // if(this.checkInfinityArray()){
-                //     this.findLastInfinityIndex()
-                //     const lastInfinityIndex = this.findLastInfinityIndex()
-                //     console.log(lastInfinityIndex);
-                //     this.frames.splice(lastInfinityIndex, 1, {
-                //         page: page,
-                //         countOfPageIndex: predictedIndex,
-                //         pinky: true,
-                //     });
-                //     this.countOfPageIndex++;
-                // }else{
-                //     // Replace (OPTIMAL logic in function findOPTIMALPage)
-                //     const optimalPageIndex = this.findOptimalPage();
-                //     this.frames.splice(optimalPageIndex, 1, {
-                //         page: page,
-                //         countOfPageIndex: predictedIndex,
-                //         pinky: true,
-                //     });
-                //     this.countOfPageIndex++;
-                // }
-                const optimalPageIndex = this.findOptimalPage();
+                if(this.checkInfinityArray()){
+                    const lastInfinityIndex = this.findLastInfinityIndex()
+                    console.log(lastInfinityIndex);
+                    this.frames.splice(lastInfinityIndex, 1, {
+                        page: page,
+                        countOfPageIndex: predictedIndex,
+                        pinky: true,
+                    });
+                    this.countOfPageIndex++;
+                }else{
+                    // Replace (OPTIMAL logic in function findOPTIMALPage)
+                    const optimalPageIndex = this.findOptimalPage();
                     this.frames.splice(optimalPageIndex, 1, {
                         page: page,
                         countOfPageIndex: predictedIndex,
                         pinky: true,
                     });
                     this.countOfPageIndex++;
+                }
+                // const optimalPageIndex = this.findOptimalPage();
+                //     this.frames.splice(optimalPageIndex, 1, {
+                //         page: page,
+                //         countOfPageIndex: predictedIndex,
+                //         pinky: true,
+                //     });
+                //     this.countOfPageIndex++;
                 
             }
         } else {
@@ -80,21 +79,23 @@ export default class OPTIMALPageReplacement {
         resetReferenceCount();
     }
     
-    //numberArray = [1, 2, 3, 4, 6, 3 ,2 , 7, 1]
-    //page = 1
-    //predictIndex(numberArray,page) = 8;
+
 
     findLastInfinityIndex(){
-        
-        for (let index = this.frameSize; index > 0; index--) {
-            // console.log(this.frames[index-1]);
-            if(this.frames[index-1].countOfPageIndex>=100000000){
-                // console.log(index);
-                return index-1;
+
+        for (let index = 0; index < this.frameSize; index++) {
+            if(this.frames[index].countOfPageIndex>=100000000){
+                console.log(this.frames[index]);
+                return index;
             }
             
         }
+        
     }
+
+    //numberArray = [1, 2, 3, 4, 6, 3 ,2 , 7, 1]
+    //page = 1
+    //predictIndex(numberArray,page) = 8;
 
     predictIndex(numberArray,page){
         for (let index = this.count; index < numberArray.length; index++) {
