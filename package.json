@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "page-replacement": "file:"
   }
 }

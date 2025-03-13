@@ -13,7 +13,7 @@
 }
 
 body {
-  background-color: #ECF2FF;
+  background-color: #ecf2ff;
 }
 body .contain {
   width: 1440px;
@@ -333,6 +333,7 @@ body .contain div div .Frame-choice-wrapper div div div #customFrame {
   width: 50px;
   height: 50px;
   font-size: 32px;
+  text-align: center;
 }
 body .contain div div .reference {
   display: flex;
@@ -624,6 +625,30 @@ body .contain #tutor .tutor div ul li p {
 @media (max-width: 480px) {
   body .contain #tutor .tutor div ul li p {
     font-size: 18px;
+  }
+}
+body .contain #tutor .tutor div ul li:nth-of-type(5) p {
+  font-size: 30px;
+  font-family: "Playfair Display", serif;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  body .contain #tutor .tutor div ul li:nth-of-type(5) p {
+    font-size: 25px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  body .contain #tutor .tutor div ul li:nth-of-type(5) p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  body .contain #tutor .tutor div ul li:nth-of-type(5) p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  body .contain #tutor .tutor div ul li:nth-of-type(5) p {
+    font-size: 14px;
   }
 }
 body .contain #pageFault {
