@@ -184,6 +184,37 @@
     <script type="module" src="./events/frameChooseEvent.js"></script>
     <script type="module" src="./events/validationModalButtonClick.js"></script>
     <script type="module" src="./components/clockFramesGenerator.js"></script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Page Replacement Calculator",
+          "operatingSystem": "Web",
+          "applicationCategory": "Education",
+          "description": "Công cụ mô phỏng thuật toán thay thế trang (FIFO, LRU, Optimal, Clock).",
+          "url": "https://page-replacement.com",
+          "author": {
+            "@type": "Person",
+            "name": "Vazy"
+          }
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var userLang = navigator.language || navigator.userLanguage;
+          var metaTag = document.getElementById("dynamic-description");
+      
+          if (userLang.startsWith("vi")) {
+            metaTag.setAttribute("content", "Công cụ mô phỏng thuật toán thay thế trang (FIFO, LRU, OPTIMAL, CLOCK). Hỗ trợ học tập hệ điều hành.");
+          } else {
+            metaTag.setAttribute("content", "Page Replacement Calculator for FIFO, LRU, OPTIMAL, and CLOCK algorithms. Ideal for OS learning.");
+          }
+        });
+    </script>
 </body>
-
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4Q57VTW"height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
 </html>
