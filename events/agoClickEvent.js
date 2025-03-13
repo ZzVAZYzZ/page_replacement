@@ -69,4 +69,4 @@ agoChoice.CLOCKChoice.addEventListener('mouseleave', () => {
 });
 
 
-export const getAlgorithm = () => _algorithm;
+export const getAlgorithm = () =>  _algorithm;

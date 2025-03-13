@@ -1,5 +1,4 @@
 import { addOnColumn,resetReferenceCount } from "../components/pageFramesGenerator.js";
-
 export default class LRUPageReplacement {
     constructor(frameSize, resultElement) {
         this.frameSize = frameSize;
@@ -7,10 +6,13 @@ export default class LRUPageReplacement {
         this.pageFaults = 0;
         this.resultElement = resultElement;
         this.countOfPageIndex = 1;
+        this.numberArray = [];
+        this.newIndex = 0;
     }
 
     accessPage(page) {
         const pageExists = this.frames.some(item => item.page === page);
+        
         //reset pinky
         this.resetPinky()
         if (!pageExists) {
@@ -45,7 +47,7 @@ export default class LRUPageReplacement {
         this.updateResult(page);
         resetReferenceCount();
     }
-    
+
     findLRUPage() {
         let oldestPageIndex = 0;
         let oldestPageCount = this.frames[0].countOfPageIndex;

@@ -6,35 +6,67 @@ import { colorHex } from "../utils/colorHex.js";
 
 let _frameChoice = 4;
 
+let choose = 'frameChoice'
+
+//Custom Frame
+
+
+customFrame.addEventListener('change', ()=> {
+    const customFrame = document.getElementById('customFrame');
+    choose = 'customChoice';
+    setFrameChoice(customFrame.value);
+})
+
+
+customFrame.addEventListener('focus',()=>{
+    choose = 'customChoice';
+    customFrame.style.backgroundColor = '#ff7675';
+    customFrame.style.color = '#fff'
+    resetBgTextColor(customFrame,1);
+})
+customFrame.addEventListener('click',()=>{
+    choose = 'customChoice';
+    const customFrame = document.getElementById('customFrame');
+    customFrame.style.backgroundColor = '#ff7675';
+    customFrame.style.color = '#fff'
+    setFrameChoice(customFrame.value)
+})
+
+
 const setFrameChoice = (value) => {
     _frameChoice = value;
 };
 //frammeChoice click
 frameChoice.frameOne.addEventListener('click',()=>{
+    choose = 'frameChoice';
     setFrameChoice(1);
     changeBgTextColor(frameChoice.frameOne,colorHex.pink,colorHex.white);
     resetBgTextColor(frameChoice.frameOne,1);
 })
 
 frameChoice.frameTwo.addEventListener('click',()=>{
+    choose = 'frameChoice';
     setFrameChoice(2);
     changeBgTextColor(frameChoice.frameTwo,colorHex.pink,colorHex.white);
     resetBgTextColor(frameChoice.frameTwo,1);
 })
 
 frameChoice.frameThree.addEventListener('click',()=>{
+    choose = 'frameChoice';
     setFrameChoice(3);
     changeBgTextColor(frameChoice.frameThree,colorHex.pink,colorHex.white);
     resetBgTextColor(frameChoice.frameThree,1);
 })
 
 frameChoice.frameFour.addEventListener('click',()=>{
+    choose = 'frameChoice';
     setFrameChoice(4);
     changeBgTextColor(frameChoice.frameFour,colorHex.pink,colorHex.white);
     resetBgTextColor(frameChoice.frameFour,1);
 })
 
 frameChoice.frameFive.addEventListener('click',()=>{
+    choose = 'frameChoice';
     setFrameChoice(5);
     changeBgTextColor(frameChoice.frameFive,colorHex.pink,colorHex.white);
     resetBgTextColor(frameChoice.frameFive,1);
@@ -82,3 +114,4 @@ frameChoice.frameFive.addEventListener('mouseleave', () => {
 });
 
 export const getFrameChoice = () => _frameChoice;
+export const getChoice = () => choose;

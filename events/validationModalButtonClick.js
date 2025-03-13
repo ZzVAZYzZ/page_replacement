@@ -1,5 +1,3 @@
-
-
 const validationModal = document.getElementById('validationModal');
 const validationModalButton = document.getElementById('validationModalButton');
 
