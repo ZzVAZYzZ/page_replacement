@@ -3,7 +3,6 @@ import { colorHex } from "../utils/colorHex.js";
 import { agoChoice } from "../utils/agoChoice.js";
 import { frameChoice } from "../utils/frameChoice.js";
 import { tutor } from "../utils/tutor.js";
-import '../scss/index.css';
 
 //first run
 (()=>{
