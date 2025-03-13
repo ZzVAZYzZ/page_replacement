@@ -6,8 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "live-server",
-    "build": "webpack --config webpack.config.cjs",
-    "production": "http-server /public -p 3000"
+    "build": "webpack --config webpack.config.cjs"
   },
   "author": "minh hai",
   "license": "ISC",
