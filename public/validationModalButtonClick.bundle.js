@@ -1,0 +1,2 @@
+(()=>{"use strict";var t=document.getElementById("validationModal");document.getElementById("validationModalButton").addEventListener("click",(function(){t.style.display="none"}))})();
+//# sourceMappingURL=validationModalButtonClick.bundle.js.map
