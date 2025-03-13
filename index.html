@@ -17,7 +17,7 @@
     <meta name="geo.region" content="VN">
     <meta name="geo.placename" content="Vietnam">
     <meta name="robots" content="index, follow">
-    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/ZzVAZYzZ/page_replacement/refs/heads/master/assets/icons/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/icons/favicon.png">
     <title>Page Replacement Calculator</title>
     <link rel="stylesheet" href="./scss/index.css" media="screen">
     <!-- Google Tag Manager -->
@@ -34,7 +34,7 @@
 <body>
     <div class="contain">
         <div>
-            <!-- navbar -->
+            <!-- navbar/header -->
             <nav>
                 <!-- nav 1 -->
                 <div class="nav-1">
@@ -63,25 +63,26 @@
             <div>
                 <!-- FRAME-choice -->
                <div class="Frame-choice-wrapper">
-                <div >
-                    <div>
-                        <p>FRAME:</p>
-                    </div>
-                    <div>
-                        <ul>
-                            <li><button id="frameOne">1</button></li>
-                            <li><button id="frameTwo">2</button></li>
-                            <li><button id="frameThree">3</button></li>
-                            <li><button id="frameFour">4</button></li>
-                            <li><button id="frameFive">5</button></li>
-                        </ul>
+                    <div >
                         <div>
-                            <div class="custom-frame">CUSTOM:</div>
-                            <input type="text" id="customFrame" >
+                            <p>FRAME:</p>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><button id="frameOne">1</button></li>
+                                <li><button id="frameTwo">2</button></li>
+                                <li><button id="frameThree">3</button></li>
+                                <li><button id="frameFour">4</button></li>
+                                <li><button id="frameFive">5</button></li>
+                            </ul>
+                            <div>
+                                <div class="custom-frame">CUSTOM:</div>
+                                <input type="text" id="customFrame" >
+                            </div>
                         </div>
                     </div>
-                </div>
                </div>
+               
                <!-- input reference -->
                <div class="reference">
                     <div class="reference-title">
@@ -100,7 +101,7 @@
                
             </div>
     
-           
+            <!-- CSR(CLIENT SIDE RENDERING) -->
             <!-- result zone -->
             <hr class="hr-start">
 
@@ -131,7 +132,7 @@
                     <div>
                         <div class="icon-wrapper">
                             <a class="facebook-icon" href="https://www.facebook.com/nguyenminh.hai.1088893" target="_blank">
-                                <img loading="lazy" src="https://raw.githubusercontent.com/ZzVAZYzZ/page_replacement/refs/heads/master/assets/svgs/facebook.svg" type="image/svg+xml"  class="fb" alt="facebook">
+                                <img loading="lazy" src="./assets/svgs/facebook.svg" type="image/svg+xml"  class="fb" alt="facebook">
                             </a>
                             <div>
                                 <p>FACEBOOK</p>
@@ -139,7 +140,7 @@
                         </div>
                         <div class="icon-wrapper">
                             <a class="email-icon" href="mailto:haiminh454@yahoo.com" target="_blank">
-                                <img loading="lazy" src="https://raw.githubusercontent.com/ZzVAZYzZ/page_replacement/refs/heads/master/assets/svgs/email.svg" alt="SVG Image" class="email" alt="email">
+                                <img loading="lazy" src="assets/svgs/email.svg" alt="SVG Image" class="email" alt="mail">
                             </a>
                             <div>
                                 <p>EMAIL</p>
@@ -147,7 +148,7 @@
                         </div>
                         <div class="icon-wrapper">
                             <a class="github-icon" href="https://github.com/ZzVAZYzZ/page_replacement/tree/vazy" target="_blank">
-                                <img loading="lazy" src="https://raw.githubusercontent.com/ZzVAZYzZ/page_replacement/refs/heads/master/assets/svgs/github.svg" type="image/svg+xml" class="github" alt="github">
+                                <img loading="lazy" src="./assets/svgs/github.svg" type="image/svg+xml" class="github" alt="github">
                             </a>
                             <div>
                                 <p>GITHUB</p>
@@ -182,8 +183,8 @@
             <!-- test -->
              
     </div>
-    <script type="module" src="./events/runButtonClickEvent.js"></script>
-    <script type="module" src="./events/agoClickEvent.js"></script>
+    <script async  type="module" src="./events/runButtonClickEvent.js"></script>
+    <script async  type="module" src="./events/agoClickEvent.js"></script>
     <script type="module" src="./start/firstRunStart.js"></script>
     <script type="module" src="./events/frameChooseEvent.js"></script>
     <script type="module" src="./events/validationModalButtonClick.js"></script>
@@ -196,7 +197,7 @@
           "operatingSystem": "Web",
           "applicationCategory": "Education",
           "description": "Công cụ mô phỏng thuật toán thay thế trang (FIFO, LRU, Optimal, Clock).",
-          "url": "https://page-replacement.com",
+          "url": "https://page-replacement-calculator.com",
           "author": {
             "@type": "Person",
             "name": "Vazy"
