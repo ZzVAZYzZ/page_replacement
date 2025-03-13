@@ -5,11 +5,29 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "live-server"
+    "start": "live-server",
+    "build": "webpack --config webpack.config.cjs"
   },
   "author": "minh hai",
   "license": "ISC",
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.2",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
+    "live-server": "^1.2.2",
+    "mini-css-extract-plugin": "^2.9.2",
+    "sass": "^1.85.1",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.14",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "page-replacement": "file:"
   }
 }
