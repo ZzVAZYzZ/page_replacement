@@ -1,2 +1,0 @@
-(()=>{"use strict";document.getElementById("clockContainer");var e=document.createElement("div");e.classList.add("clock-cell-zone");document.createElement("div");var t=document.createElement("div");t.classList.add("clock-table")})();
-//# sourceMappingURL=clockFramesGenerator.bundle.js.map
